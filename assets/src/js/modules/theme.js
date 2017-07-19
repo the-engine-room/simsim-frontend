@@ -19,6 +19,7 @@
         init: function() {
 
             this.selectLists();
+            this.includes();
 
         },
 
@@ -39,9 +40,18 @@
                 dropdown.click(function() {
                     $(parent).toggleClass('active');
                     $(this).find('.dropdown-menu').toggleClass('hide');
+                    
                 });                  
             });
 
+        },
+
+        includes: function() {
+            var includes = $('[data-include]');
+            jQuery.each(includes, function(){
+                var file = 'inc/' + $(this).data('include') + '.html';
+                $(this).load(file);
+            });
         }
     };
     

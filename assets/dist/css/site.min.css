@@ -82,7 +82,9 @@ h4 {
 h5 {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  font-size: 10px;
+  color: #98B2B7; }
 
 h6 {
   font-family: "Montserrat", sans-serif;
@@ -359,10 +361,6 @@ section.newsletter {
         padding: 1.05rem 1.25em;
         color: white; }
 
-footer.primary {
-  background-color: white;
-  padding: 57px 0 62px; }
-
 .logo {
   display: block;
   float: left;
@@ -395,10 +393,178 @@ footer.primary {
     width: 123px;
     height: 47px; }
 
+footer.primary {
+  display: block;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0;
+  background-color: white;
+  padding: 57px 0 52px; }
+  @media (min-width: 1200px) {
+    footer.primary {
+      display: block;
+      float: left;
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0; } }
+  @media (max-width: 1024px) {
+    footer.primary {
+      display: block;
+      float: left;
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0; } }
+  @media (max-width: 736px) {
+    footer.primary {
+      display: block;
+      float: left;
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0; } }
+  footer.primary nav.footer {
+    display: block;
+    float: left;
+    width: 39.66667%;
+    margin-left: 1%;
+    margin-right: 1%; }
+    @media (min-width: 1200px) {
+      footer.primary nav.footer {
+        display: block;
+        float: left;
+        width: 39.66667%;
+        margin-left: 1%;
+        margin-right: 1%; } }
+    @media (max-width: 1024px) {
+      footer.primary nav.footer {
+        display: block;
+        float: left;
+        width: 31.66667%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    @media (max-width: 736px) {
+      footer.primary nav.footer {
+        display: block;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    footer.primary nav.footer .left {
+      width: 55%;
+      float: left; }
+    footer.primary nav.footer .right {
+      width: 45%;
+      float: left; }
+    footer.primary nav.footer ul {
+      margin: 0;
+      padding: 0; }
+      footer.primary nav.footer ul li {
+        list-style: none;
+        padding: 6px 0; }
+        footer.primary nav.footer ul li a {
+          font-size: 16px;
+          font-family: "Montserrat", sans-serif;
+          letter-spacing: 1.5px;
+          color: #364A4D;
+          font-weight: 700;
+          text-transform: uppercase; }
+  footer.primary .associates {
+    display: block;
+    float: left;
+    width: 56.33333%;
+    margin-left: 1%;
+    margin-right: 1%; }
+    @media (min-width: 1200px) {
+      footer.primary .associates {
+        display: block;
+        float: left;
+        width: 56.33333%;
+        margin-left: 1%;
+        margin-right: 1%; } }
+    @media (max-width: 1024px) {
+      footer.primary .associates {
+        display: block;
+        float: left;
+        width: 48.33333%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    @media (max-width: 736px) {
+      footer.primary .associates {
+        display: block;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    footer.primary .associates div {
+      float: left;
+      text-align: center; }
+    footer.primary .associates .first {
+      width: 25%; }
+    footer.primary .associates .second {
+      width: 50%; }
+      footer.primary .associates .second img {
+        padding: 0 10px; }
+    footer.primary .associates .third {
+      width: 25%; }
+    footer.primary .associates img {
+      height: 45px;
+      width: auto;
+      margin-top: 20px; }
+  footer.primary .copyright {
+    display: block;
+    float: left;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 22px;
+    margin-top: 30px;
+    border-top: 1px solid #98B2B7; }
+    @media (min-width: 1200px) {
+      footer.primary .copyright {
+        display: block;
+        float: left;
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%; } }
+    @media (max-width: 1024px) {
+      footer.primary .copyright {
+        display: block;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    @media (max-width: 736px) {
+      footer.primary .copyright {
+        display: block;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    footer.primary .copyright .text {
+      width: 80%;
+      float: left;
+      font-size: 12px;
+      color: #98B2B7;
+      font-family: "Montserrat", sans-serif; }
+      footer.primary .copyright .text span {
+        font-size: 18px;
+        display: inline-block;
+        margin-top: -3px; }
+    footer.primary .copyright .icons {
+      width: 20%;
+      float: left;
+      text-align: right;
+      font-size: 12px;
+      margin-top: 11px; }
+      footer.primary .copyright .icons i {
+        padding: 0 8px; }
+      footer.primary .copyright .icons a {
+        color: #98B2B7; }
+
 form {
   display: block; }
   form.mp-dropdowns {
-    padding: 29px 0; }
+    padding: 29px 0 0; }
 
 fieldset {
   display: block;
@@ -588,7 +754,8 @@ meter {
   .mp-dropdowns .dropdown-wrapper .disabled {
     pointer-events: none; }
   .mp-dropdowns .dropdown-wrapper .hide {
-    display: none; }
+    opacity: 0;
+    visibility: hidden; }
 
 .mp-dropdowns .button-primary {
   clear: left; }
@@ -602,7 +769,10 @@ ul.dropdown-menu {
   border-radius: 10px;
   padding: 8px 17px;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s, opacity 0.15s linear; }
   ul.dropdown-menu li {
     padding: 10px 0px;
     list-style: none; }
@@ -846,6 +1016,143 @@ nav.secondary {
             margin-top: -2px;
             margin-right: 4px; }
 
+div.pagination {
+  float: left;
+  clear: left;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 0 72px; }
+  div.pagination a {
+    display: inline-block;
+    padding: 0 10px;
+    letter-spacing: 1.3px;
+    font-weight: 700; }
+    div.pagination a:not(.current-page) {
+      color: #98B2B7; }
+    div.pagination a .fa {
+      font-size: 16px;
+      margin-top: -5px; }
+  div.pagination ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0 30px; }
+    div.pagination ul li {
+      list-style: none;
+      font-size: 10px; }
+
+div.responses-list {
+  display: block;
+  float: left;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 0;
+  padding: 53px 0; }
+  @media (min-width: 1200px) {
+    div.responses-list {
+      display: block;
+      float: left;
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 0; } }
+  @media (max-width: 1024px) {
+    div.responses-list {
+      display: block;
+      float: left;
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 0; } }
+  @media (max-width: 736px) {
+    div.responses-list {
+      display: block;
+      float: left;
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0; } }
+  div.responses-list .response {
+    display: block;
+    float: left;
+    width: 31.33333%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin: 15px 0; }
+    @media (min-width: 1200px) {
+      div.responses-list .response {
+        display: block;
+        float: left;
+        width: 31.33333%;
+        margin-left: 1%;
+        margin-right: 1%; } }
+    @media (max-width: 1024px) {
+      div.responses-list .response {
+        display: block;
+        float: left;
+        width: 23.33333%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    @media (max-width: 736px) {
+      div.responses-list .response {
+        display: block;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    div.responses-list .response .meta {
+      background: white;
+      text-align: center;
+      float: left;
+      width: 35.5%;
+      padding-top: 15px; }
+      div.responses-list .response .meta img {
+        width: 69px;
+        height: 69px;
+        border-radius: 50px; }
+      div.responses-list .response .meta h5 {
+        margin: 16px 0 5px; }
+      div.responses-list .response .meta .score {
+        background: #F9A400;
+        color: white;
+        position: relative;
+        padding: 6px 10px 7px;
+        border-radius: 4px; }
+        div.responses-list .response .meta .score .fa-comments {
+          position: absolute;
+          top: 5px;
+          left: 8px;
+          font-size: 24px; }
+        div.responses-list .response .meta .score .score-number {
+          text-align: right; }
+          div.responses-list .response .meta .score .score-number .numbers {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: "Montserrat", sans-serif; }
+          div.responses-list .response .meta .score .score-number .label {
+            margin: 3px 0 0;
+            font-size: 5px;
+            font-weight: 700; }
+        div.responses-list .response .meta .score.inactive {
+          background: #D6D6D6;
+          color: #A3A3A3; }
+    div.responses-list .response .details {
+      float: left;
+      width: 64.5%;
+      padding: 0 11px; }
+      div.responses-list .response .details .name {
+        margin-top: 1px;
+        margin: 1px 0 4px;
+        color: #E86D15;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 1.3px; }
+      div.responses-list .response .details .description {
+        font-size: 12px;
+        color: #364A4D;
+        line-height: 1.5;
+        margin-top: 5px; }
+
 [data-tooltip] {
   position: relative;
   height: 100%;
@@ -891,30 +1198,167 @@ nav.secondary {
 footer {
   display: block;
   float: left;
-  width: 98%;
-  margin-left: 1%;
-  margin-right: 1%; }
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0; }
   @media (min-width: 1200px) {
     footer {
       display: block;
       float: left;
-      width: 98%;
-      margin-left: 1%;
-      margin-right: 1%; } }
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0; } }
   @media (max-width: 1024px) {
     footer {
       display: block;
       float: left;
-      width: 90%;
-      margin-left: 5%;
-      margin-right: 5%; } }
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0; } }
   @media (max-width: 736px) {
     footer {
       display: block;
       float: left;
-      width: 90%;
-      margin-left: 5%;
-      margin-right: 5%; } }
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0; } }
+  footer nav.footer {
+    display: block;
+    float: left;
+    width: 39.66667%;
+    margin-left: 1%;
+    margin-right: 1%; }
+    @media (min-width: 1200px) {
+      footer nav.footer {
+        display: block;
+        float: left;
+        width: 39.66667%;
+        margin-left: 1%;
+        margin-right: 1%; } }
+    @media (max-width: 1024px) {
+      footer nav.footer {
+        display: block;
+        float: left;
+        width: 31.66667%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    @media (max-width: 736px) {
+      footer nav.footer {
+        display: block;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    footer nav.footer .left {
+      width: 55%;
+      float: left; }
+    footer nav.footer .right {
+      width: 45%;
+      float: left; }
+    footer nav.footer ul {
+      margin: 0;
+      padding: 0; }
+      footer nav.footer ul li {
+        list-style: none;
+        padding: 6px 0; }
+        footer nav.footer ul li a {
+          font-size: 16px;
+          font-family: "Montserrat", sans-serif;
+          letter-spacing: 1.5px;
+          color: #364A4D;
+          font-weight: 700;
+          text-transform: uppercase; }
+  footer .associates {
+    display: block;
+    float: left;
+    width: 56.33333%;
+    margin-left: 1%;
+    margin-right: 1%; }
+    @media (min-width: 1200px) {
+      footer .associates {
+        display: block;
+        float: left;
+        width: 56.33333%;
+        margin-left: 1%;
+        margin-right: 1%; } }
+    @media (max-width: 1024px) {
+      footer .associates {
+        display: block;
+        float: left;
+        width: 48.33333%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    @media (max-width: 736px) {
+      footer .associates {
+        display: block;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    footer .associates div {
+      float: left;
+      text-align: center; }
+    footer .associates .first {
+      width: 25%; }
+    footer .associates .second {
+      width: 50%; }
+      footer .associates .second img {
+        padding: 0 10px; }
+    footer .associates .third {
+      width: 25%; }
+    footer .associates img {
+      height: 45px;
+      width: auto;
+      margin-top: 20px; }
+  footer .copyright {
+    display: block;
+    float: left;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-top: 22px;
+    margin-top: 30px;
+    border-top: 1px solid #98B2B7; }
+    @media (min-width: 1200px) {
+      footer .copyright {
+        display: block;
+        float: left;
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%; } }
+    @media (max-width: 1024px) {
+      footer .copyright {
+        display: block;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    @media (max-width: 736px) {
+      footer .copyright {
+        display: block;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%; } }
+    footer .copyright .text {
+      width: 80%;
+      float: left;
+      font-size: 12px;
+      color: #98B2B7;
+      font-family: "Montserrat", sans-serif; }
+      footer .copyright .text span {
+        font-size: 18px;
+        display: inline-block;
+        margin-top: -3px; }
+    footer .copyright .icons {
+      width: 20%;
+      float: left;
+      text-align: right;
+      color: #98B2B7;
+      font-size: 12px;
+      margin-top: 11px; }
+      footer .copyright .icons i {
+        padding: 0 8px; }
 
 article.grid-examples {
   display: block;

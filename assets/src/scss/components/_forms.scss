@@ -9,7 +9,7 @@
 form {
     display: block;
     &.mp-dropdowns {
-        padding: 29px 0;
+        padding: 29px 0 0;
     }
 }
 
@@ -152,7 +152,8 @@ meter {
             pointer-events: none;
         }
         .hide{
-            display:none;
+            opacity:0;
+            visibility: hidden;
         }
     }
     .button-primary {
@@ -171,6 +172,10 @@ ul.dropdown-menu{
     padding: 8px 17px;
     position: absolute;
     width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s, opacity 0.15s linear;
+
     li{
         padding:10px 0px;
         list-style: none;
