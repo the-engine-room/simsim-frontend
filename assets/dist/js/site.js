@@ -1340,7 +1340,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       jQuery(document).ready(function ($) {
         Theme.init();
       });
-    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_7128c02d.js", "/");
+    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_fe89e150.js", "/");
   }, { "./modules/theme": 6, "buffer": 2, "rH1JPG": 4 }], 6: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // ------------------------------------
@@ -1382,9 +1382,18 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               });
               var dropdown = $(this).find('.dropdown');
               dropdown.click(function () {
+                $('.dropdown').not(this).find('.dropdown-menu').addClass('hide');
+                $('.dropdown').not(this).closest('.dropdown-wrapper').removeClass('active');
                 $(parent).toggleClass('active');
                 $(this).find('.dropdown-menu').toggleClass('hide');
               });
+              // $('.dropdown').click(function() {
+              //     $('.dropdown .dropdown-menu').addClass('hide');
+              //     var dropdown = $(this).find('.dropdown-menu');
+              //     if($(dropdown).hasClass('hide')) {
+              //         $(dropdown).removeClass('hide');
+              //     }
+              // });
             });
           },
 

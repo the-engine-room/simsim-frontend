@@ -38,10 +38,19 @@
                 });
                 var dropdown = $(this).find('.dropdown');
                 dropdown.click(function() {
+                    $('.dropdown').not(this).find('.dropdown-menu').addClass('hide');
+                    $('.dropdown').not(this).closest('.dropdown-wrapper').removeClass('active');
                     $(parent).toggleClass('active');
                     $(this).find('.dropdown-menu').toggleClass('hide');
-                    
-                });                  
+
+                }); 
+                // $('.dropdown').click(function() {
+                //     $('.dropdown .dropdown-menu').addClass('hide');
+                //     var dropdown = $(this).find('.dropdown-menu');
+                //     if($(dropdown).hasClass('hide')) {
+                //         $(dropdown).removeClass('hide');
+                //     }
+                // });
             });
 
         },
