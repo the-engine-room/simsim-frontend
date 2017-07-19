@@ -10,7 +10,7 @@ section.newsletter {
 		text-align: center;
 	}
 	form {
-		@include columns(12);
+		@include columns(12,0,0);
 		padding-top: 22px;
 		input {
 			@include columns(4);
@@ -36,8 +36,6 @@ section.newsletter {
 
 
 footer.primary {
-	@include columns(12,0,0);
-
 	background-color: white;
 	padding: 57px 0 52px;
 	nav.footer {
