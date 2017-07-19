@@ -1,0 +1,17 @@
+//
+// Header
+// --------------------------------------------------
+
+header.primary {
+	background-color: white;
+	padding-bottom: 5px;
+}
+.logo {
+	@include columns(1.6);
+	float: left;
+	
+	img {
+		width: 123px;
+		height: 47px;
+	}
+}

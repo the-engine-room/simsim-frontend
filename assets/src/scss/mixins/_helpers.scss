@@ -1,24 +1,14 @@
 // Custom Buttons
 // -------------------
 
-@mixin button-style($customColor, $customTextColor){
-	background-color: $customColor;
-	color: $customTextColor;
-	
-	 &:hover {
-		background-color: darken($customColor, 3%);
-		text-decoration: none;
-	}
-		
-	&:active {
-		background: darken($customColor, 6%);
-	}
-
-	&.disabled {
-		background-color: lighten($customColor, 2.5%);
-		color: darken($customColor, 15%);
-		cursor: default;
-	}
+@mixin button-style(){
+	background-image: linear-gradient(-180deg, #F7A300 0%, #E86E12 100%);
+	color: white;
+	text-transform: uppercase;
+	font-family: $headingFont;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	font-size: 1rem;
 }
 
 // Breakpoints
@@ -154,4 +144,12 @@
 	border-top: $size solid transparent;
 	border-bottom: $size solid transparent;
 	border-left: $size solid $color;
+}
+
+@mixin down-arrow() {
+	position: absolute;
+    right: 26px;
+    top: 17px;
+    color: $navColor;
+    font-size: 20px;	
 }

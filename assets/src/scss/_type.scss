@@ -11,7 +11,7 @@
 
 @mixin h1 {
 	@include heading-font();
-	@include font-size(40);
+	@include font-size(24);
 }
 
 @mixin h2 {
@@ -61,7 +61,9 @@ h3,
 h4,
 h5,
 h6 {
-
+	text-transform: uppercase;
+	color: $primaryColor;
+	font-weight: 700;
 }
 
 h1 {
@@ -99,10 +101,6 @@ p {
 a {
 	color: $primaryColor;
 	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
 }
 
 // Basic Elements

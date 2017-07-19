@@ -1,0 +1,39 @@
+//
+// Footer
+// --------------------------------------------------
+
+section.newsletter {
+	background: #364A4D;
+	padding: 40px 0;
+	h3 {
+		color: white;
+		text-align: center;
+	}
+	form {
+		@include columns(12);
+		padding-top: 22px;
+		input {
+			@include columns(4);
+			&:not([type=submit]) {
+				background: transparent;
+				border: 1px solid white;
+				padding: 1.05rem 1.25em;
+				color: white;
+			}
+		}
+	}
+}
+
+footer.primary {
+	background-color: white;
+	padding: 57px 0 62px;
+}
+.logo {
+	@include columns(1.6);
+	float: left;
+	
+	img {
+		width: 123px;
+		height: 47px;
+	}
+}

@@ -1340,7 +1340,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       jQuery(document).ready(function ($) {
         Theme.init();
       });
-    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_88ec4535.js", "/");
+    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_4db4061f.js", "/");
   }, { "./modules/theme": 6, "buffer": 2, "rH1JPG": 4 }], 6: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // ------------------------------------
@@ -1363,10 +1363,29 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
           init: function init() {
 
-            this.example();
+            this.selectLists();
           },
 
-          example: function example() {}
+          selectLists: function selectLists() {
+
+            $('.dropdown-wrapper').each(function () {
+              var parent = $(this);
+              var select = $(this).find('.select-content');
+              // onClick new options list of new select
+              select.text($(this).find('.dropdown-menu > li.selected').text());
+              var newOptions = $(this).find('.dropdown-menu > li');
+              newOptions.click(function () {
+                $(select).text($(this).text());
+                $('.dropdown-menu > li').removeClass('selected');
+                $(this).addClass('selected');
+              });
+              var dropdown = $(this).find('.dropdown');
+              dropdown.click(function () {
+                $(parent).toggleClass('active');
+                $(this).find('.dropdown-menu').toggleClass('hide');
+              });
+            });
+          }
         };
 
         module.exports = Theme;

@@ -8,7 +8,7 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"] {
     display: inline-block;
-    padding: 0.625em 1.25em;
+    padding: 1.22rem 1.25em;
     margin: 0 0 0.625em;
     border: none;
     appearance: none;
@@ -18,9 +18,6 @@ input[type="reset"] {
     text-decoration: none;
     font-family: inherit;
     font-size: 1rem;
-    
-    @include button-style($baseColor, $textColor);
-
     &.huge{
         font-size: 1.25rem;
         font-weight: 600;
@@ -31,36 +28,13 @@ input[type="reset"] {
 button.primary,
 .button-primary,
 input.button-primary {
-	@include button-style($primaryColor, white);
+	@include button-style();
 }
 
 button.secondary,
 .button-secondary,
 input.button-secondary {
-	@include button-style($secondaryColor, white);
-}
-
-button.facebook,
-.button-facebook,
-input.button-facebook {
-	@include button-style($socialFacebook, white);
-	padding-left: 0.6em;
-
-	&.disabled {
-		background: #9099ae;
-		color: white;
-		cursor: default;
-	}
-}
-
-button.twitter,
-.button-twitter,
-input.button-twitter {
-	@include button-style($socialTwitter, white);
-
-	&.disabled {
-		background-color: #aebcc7;
-		color: white;
-		cursor: default;
-	}
+    @include button-style();
+    padding: 0.54rem 0.6rem;
+    font-size: 14px;
 }

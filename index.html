@@ -7,7 +7,7 @@
         <title>Nouabook</title>
         <meta name="description" content="Nouabook">
         <meta name="author" content="The Engine Room">
-
+        <link rel="shortcut icon" href="assets/favicon.ico?v=2.0" />
         <link rel="stylesheet" href="assets/dist/css/site.min.css?v=1.0">
 
     <!--[if lt IE 9]>
@@ -16,7 +16,148 @@
     </head>
 
     <body>
+        <header class="primary">
+            <div class="container">
+                <nav class="secondary">
+                    <div class="language-choice">
+                        <ul>
+                            <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
+                            <li><a href="#">Francais</a></li>
+                        </ul>
+                    </div>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> ESPACE DÉPUTÉ-E</a></li>
+                            <li><a href="#">A PROPOS</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                        </ul>     
+                        <div class="search-box">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>                   
+                    </div>
+                </nav>
+                <a href="/" class="logo"><img src="assets/dist/img/logo-nouabook_2x@2x.png"></a>
+                <nav class="primary">    
+                    <ul>
+                        <li><a href="#">VOS DÉPUTÉ-ES</a></li>
+                        <li><a href="#">VOS QUESTIONS</a></li>
+                        <li><a href="#">PUBLICATIONS</a></li>
+                        <li><a href="#">COMMENT ÇA MARCHE</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                    <button class="secondary">POSEZ VOTRE QUESTION</button>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="main-content">
+                    <h1>VOS DÉPUTÉ-ES</h1>
+                    <form class="mp-dropdowns">
+                        <div class="dropdown-wrapper">
+                            <label>NOM DU/DE LA DÉPUTÉ</label>
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="select-content"></span>
+                                    <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
+                                </div>
+                                <ul class="dropdown-menu hide">
+                                    <li class='selected'><a href="#">Votre depute</a></li>
+                                    <li><a href="#">Example 1</a></li>
+                                    <li><a href="#">Example 2</a></li>
+                                    <li><a href="#">Example 3</a></li>
+                                    <li><a href="#">Example 4</a></li>
+                                </ul>
+                            </div>
+                        </div>  
 
+                        <div class="dropdown-wrapper">
+                            <label>PARTI POLITIQUE</label>
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="select-content"></span>
+                                    <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
+                                </div>
+                                <ul class="dropdown-menu hide">
+                                    <li class='selected'><a href="#">Tours</a></li>
+                                    <li><a href="#">Example 1</a></li>
+                                    <li><a href="#">Example 2</a></li>
+                                    <li><a href="#">Example 3</a></li>
+                                    <li><a href="#">Example 4</a></li>
+                                </ul>
+                            </div>
+                        </div> 
+
+                        <div class="dropdown-wrapper">
+                            <label>PREFECTURE OU PROVINCE</label>
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="select-content"></span>
+                                    <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
+                                </div>
+                                <ul class="dropdown-menu hide">
+                                    <li class='selected'><a href="#">Tours</a></li>
+                                    <li><a href="#">Example 1</a></li>
+                                    <li><a href="#">Example 2</a></li>
+                                    <li><a href="#">Example 3</a></li>
+                                    <li><a href="#">Example 4</a></li>
+                                </ul>
+                            </div>
+                        </div> 
+
+                        <div class="dropdown-wrapper">
+                            <label>CIRCONSCRIPTION</label>
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="select-content"></span>
+                                    <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
+                                </div>
+                                <ul class="dropdown-menu hide">
+                                    <li class='selected'><a href="#">Tours</a></li>
+                                    <li><a href="#">Example 1</a></li>
+                                    <li><a href="#">Example 2</a></li>
+                                    <li><a href="#">Example 3</a></li>
+                                    <li><a href="#">Example 4</a></li>
+                                </ul>
+                            </div>
+                        </div> 
+
+                        <div class="dropdown-wrapper">
+                            <label>COMMISSION</label>
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="select-content"></span>
+                                    <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
+                                </div>
+                                <ul class="dropdown-menu hide">
+                                    <li class='selected'><a href="#">Votre depute</a></li>
+                                    <li><a href="#">Example 1</a></li>
+                                    <li><a href="#">Example 2</a></li>
+                                    <li><a href="#">Example 3</a></li>
+                                    <li><a href="#">Example 4</a></li>
+                                </ul>
+                            </div>
+                        </div> 
+
+                        <input class="button-primary" type="submit" value="Rechercher">
+                    </form>
+                </div>
+            </div>
+        </main>
+        <section class="newsletter">
+            <div class="container">
+                <h3>Abonnez-vous à notre newsletter</h3>
+                <form class="newsletter">
+                    <input type="text" placeholder="Nom">
+                    <input type="email" placeholder="votre@adresse.com">
+                    <input type="submit" value="S'Abonner" class="button-primary">
+                </form>
+            </div>
+        </section>
+        <footer class="primary">
+            <div class="container">
+            </div>
+        </footer>
         <script>
             WebFontConfig = {
                 google: {
@@ -33,5 +174,6 @@
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="assets/dist/js/site.js"></script>
+        <script src="https://use.fontawesome.com/6f07f7ab39.js"></script>
     </body>
 </html>

@@ -17,3 +17,15 @@
 .success { 
 	color: $successColor; 
 }
+
+html {
+	background-color: #F4F4F4; 
+}
+main {
+	padding: 48px 0;
+	margin-top: 4px;
+	background-color: white;
+}
+.main-content {
+	@include columns(10.8,0.6);
+}

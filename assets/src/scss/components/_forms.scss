@@ -7,27 +7,35 @@
 // -------------------
 
 form {
-	display: block;
+    display: block;
+    &.mp-dropdowns {
+        padding: 29px 0;
+    }
 }
 
 fieldset {
-	display: block;
-	margin: 1.25em 0;
-	padding: 0;
+    display: block;
+    margin: 1.25em 0;
+    padding: 0;
 }
 
 legend {
-	display: block;
-	width: 100%;
-	margin: 0 0 1em 0;
-	font-weight: bold;
-	border-bottom: 1px solid $baseColor;
+    display: block;
+    width: 100%;
+    margin: 0 0 1em 0;
+    font-weight: bold;
+    border-bottom: 1px solid $baseColor;
 }
 
 label {
-	display: block;
-	margin: 0 0 0.25em;
-	font-weight: bold;
+    display: block;
+    margin: 0 0 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $headingFont;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    color: $navColor;
 }
 
 // Form Elements
@@ -49,55 +57,130 @@ input[type="search"],
 input[type="tel"],
 input[type="image"],
 input[type="color"] {
-	display: block;
-	padding: 0.5em;
-	margin: 0 0 0.625em;
-	vertical-align: middle;
-	border: 1px solid $baseColor;
-	outline: none;
-	font-family: inherit;
-	font-size: 1rem;
-	border-radius: 0;
-	-webkit-appearance: none;
-	-moz-appearance: none;
+    display: block;
+    padding: 0.5em;
+    margin: 0 0 0.625em;
+    vertical-align: middle;
+    border: 1px solid $baseColor;
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
-	&:hover {
-		border: 1px solid darken($baseColor, 3%);
-	}
-	&:focus {
-		border: 1px solid darken($baseColor, 5%);
-	}
+    &:hover {
+        border: 1px solid darken($baseColor, 3%);
+    }
+    &:focus {
+        border: 1px solid darken($baseColor, 5%);
+    }
 }
 
 // Form Buttons
 
 input[type="submit"],
 input[type="button"] {
-	display: block;
-	border-radius: 0;
+    display: block;
+    border-radius: 0;
 }
 input[type="file"] {
-	padding: 0.125em;
-	margin: 0 0 0.625em;
-	font-family: inherit;
-	font-size: 1rem;
-	-webkit-appearance: none;
-	border-radius: 0;
-	line-height: 100%;
+    padding: 0.125em;
+    margin: 0 0 0.625em;
+    font-family: inherit;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    border-radius: 0;
+    line-height: 100%;
 }
 
 // Misc Additions
 
 textarea {
-	padding: 0.25em; // to make the textarea more writeable
+    padding: 0.25em; // to make the textarea more writeable
 }
 
 // Bonus HTML5 Elements
 
 progress,
 meter {
-	padding: 0.125em;
-	margin: 0 0 0.625em;
-	font-family: inherit;
-	font-size: 1rem;
+    padding: 0.125em;
+    margin: 0 0 0.625em;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+
+// SELECTS
+
+.mp-dropdowns {
+    
+
+    .dropdown-wrapper{
+        @include columns(5.5,0,0);
+
+        &:nth-of-type(even) {
+            @include columns(5.5,0.8,0)
+        }
+        padding: 0 0 28px;
+        position: relative;
+        z-index: 10;
+        &.active {
+            z-index: 20;
+        }
+        .select {
+            padding: 19px 18px;
+            position: relative;
+            background: #F4F4F4;
+            border-radius: 10px;
+            height: 54px;
+        }  
+        .select.chosen {
+            color: #333;
+        }    
+        .select .down-icon {
+            @include down-arrow();
+        }
+        .dropdown {
+            font-size: 14px;
+
+            .select, .dropdown-menu>li {
+                cursor: pointer;
+            }
+        }
+        .disabled{
+            pointer-events: none;
+        }
+        .hide{
+            display:none;
+        }
+    }
+    .button-primary {
+        clear: left;
+    }
+}
+
+
+ul.dropdown-menu{
+    list-style-type: none;
+    margin:0px;
+    padding:5px;
+    background: #F4F4F4;
+    margin-top: -15px;
+    border-radius:10px;
+    padding: 8px 17px;
+    position: absolute;
+    width: 100%;
+    li{
+        padding:10px 0px;
+        list-style: none;
+        &:hover {
+            a {
+                text-decoration: underline;
+            }
+        }
+        a {
+            font-size: 14px;
+        }
+    }  
 }
