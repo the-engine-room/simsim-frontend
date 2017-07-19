@@ -18,7 +18,13 @@
 
 		init: function() {
 
-			// Init 
+			this.example();
+
+		},
+
+		example: function() {
+
+
 
 		}
 	};
