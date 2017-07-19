@@ -1077,7 +1077,8 @@ div.responses-list {
       text-align: center;
       float: left;
       width: 35.5%;
-      padding-top: 15px; }
+      padding-top: 15px;
+      border-radius: 4px; }
       div.responses-list .response .meta img {
         width: 69px;
         height: 69px;
