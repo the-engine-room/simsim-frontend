@@ -581,15 +581,15 @@ footer.primary {
         font-size: 18px;
         display: inline-block;
         margin-top: -3px; }
-    footer.primary .copyright .icons {
+    footer.primary .copyright .icons-footer {
       width: 20%;
       float: left;
       text-align: right;
       font-size: 12px;
       margin-top: 11px; }
-      footer.primary .copyright .icons i {
+      footer.primary .copyright .icons-footer i {
         padding: 0 8px; }
-      footer.primary .copyright .icons a {
+      footer.primary .copyright .icons-footer a {
         color: #98B2B7; }
 
 form {
