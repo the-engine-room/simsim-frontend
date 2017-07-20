@@ -8,7 +8,7 @@
 
 form {
     display: block;
-    &.mp-dropdowns {
+    &.dropdowns {
         padding: 29px 0 0;
     }
 }
@@ -29,19 +29,35 @@ legend {
 
 label {
     display: block;
-    margin: 0 0 0.5em;
+    margin: 0 0 1em;
     font-weight: bold;
     text-transform: uppercase;
     font-family: $headingFont;
     letter-spacing: 1.5px;
     font-size: 10px;
     color: $navColor;
+    &.checkbox {
+        color: $textColor;
+        font-size: 14px;
+        font-family: $paragraphFont;
+        text-transform: none;
+        font-weight: 400;
+        letter-spacing: normal;
+        &.half {
+            width: 47%;
+            margin-right: 3%;
+            float: left;
+        }
+    }
 }
+
+
 
 // Form Elements
 // -------------------
 
 textarea,
+.textarea,
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -58,17 +74,22 @@ input[type="tel"],
 input[type="image"],
 input[type="color"] {
     display: block;
-    padding: 0.5em;
-    margin: 0 0 0.625em;
+    margin: 0 0 28px;
     vertical-align: middle;
-    border: 1px solid $baseColor;
     outline: none;
+    border: 1px solid transparent;
     font-family: inherit;
     font-size: 1rem;
     border-radius: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
-
+    padding: 19px 18px;
+    position: relative;
+    background: $inputColor;
+    border-radius: 8px;
+    height: 54px;
+    width: 100%;
+    font-size: 14px;
     &:hover {
         border: 1px solid darken($baseColor, 3%);
     }
@@ -77,6 +98,9 @@ input[type="color"] {
     }
 }
 
+input[type="checkbox"] {
+    margin-right: 8px;
+}
 // Form Buttons
 
 input[type="submit"],
@@ -96,8 +120,20 @@ input[type="file"] {
 
 // Misc Additions
 
-textarea {
-    padding: 0.25em; // to make the textarea more writeable
+textarea, .textarea {
+    height: auto;
+    min-height: 200px;
+}
+
+.textarea-wrapper {
+    position: relative;
+    .charsleft {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        font-size: 10px;
+        color: $navColor;
+    }
 }
 
 // Bonus HTML5 Elements
@@ -113,20 +149,36 @@ meter {
 
 // SELECTS
 
-.mp-dropdowns {
-    
-
-    .dropdown-wrapper{
+.main-content {
+    &.vos-depute-es .dropdowns .dropdown-wrapper {
         @include columns(5.5,0,0);
 
         &:nth-of-type(even) {
             @include columns(5.5,0.8,0)
-        }
+        }   
+    }
+    &.post-question form input.button-primary {
+        float: right;
+    }
+    &.vos-questions .dropdowns .dropdown-wrapper {
+        @include columns(5.5,0,0);
+        &:nth-of-type(even) {
+            @include columns(6,0.5,0)
+        }  
+    }
+}
+.dropdowns {
+    
+    .dropdown-wrapper{
+
         padding: 0 0 28px;
         position: relative;
         z-index: 10;
         &.active {
             z-index: 20;
+            .select {
+                border: 1px solid darken($baseColor, 3%);
+            }
         }
         .select {
             padding: 19px 18px;
@@ -134,6 +186,13 @@ meter {
             background: #F4F4F4;
             border-radius: 10px;
             height: 54px;
+            border: 1px solid transparent;
+            &:hover {
+                border: 1px solid darken($baseColor, 3%);
+            }
+            &:focus {
+                border: 1px solid darken($baseColor, 5%);
+            }            
         }  
         .select.chosen {
             color: #333;
@@ -175,6 +234,9 @@ ul.dropdown-menu{
     opacity: 1;
     visibility: visible;
     transition: visibility 0s, opacity 0.15s linear;
+    border-left: 1px solid darken($baseColor, 3%);
+    border-bottom: 1px solid darken($baseColor, 3%);
+    border-right: 1px solid darken($baseColor, 3%);
 
     li{
         padding:10px 0px;
@@ -188,4 +250,41 @@ ul.dropdown-menu{
             font-size: 14px;
         }
     }  
+}
+
+.form-success {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background: rgba(152,178,183,0.40);
+    height: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.15s linear;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    .modal {
+        position: absolute;
+        left: 50%;
+        margin-left: -316px;
+        height: 330px;
+        width: 632px;
+        padding: 66px 93px 61px;
+        background-color: white;
+        text-align: center;
+        box-shadow: 0 37px 61px 22px rgba(0,0,0,0.12);
+        border-radius: 4px;
+        p {
+            margin: 14px 0;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        button {
+            margin-bottom: 0;
+        }
+    }
 }

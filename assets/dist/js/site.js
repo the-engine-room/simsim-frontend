@@ -1340,7 +1340,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       jQuery(document).ready(function ($) {
         Theme.init();
       });
-    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_1afca709.js", "/");
+    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_a8c3489a.js", "/");
   }, { "./modules/theme": 6, "buffer": 2, "rH1JPG": 4 }], 6: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // ------------------------------------
@@ -1365,10 +1365,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             this.selectLists();
             this.includes();
+            this.textareaLimit();
+            this.formSuccess();
           },
 
           selectLists: function selectLists() {
-
             $('.dropdown-wrapper').each(function () {
               var parent = $(this);
               var select = $(this).find('.select-content');
@@ -1395,6 +1396,38 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             jQuery.each(includes, function () {
               var file = 'inc/' + $(this).data('include') + '.html';
               $(this).load(file);
+            });
+          },
+
+          textareaLimit: function textareaLimit() {
+            var maxLength = 700;
+            $('textarea#message').keyup(function () {
+              var length = $(this).val().length;
+              var length = maxLength - length;
+              $('.charsleft #chars').text(length);
+            });
+          },
+
+          formSuccess: function formSuccess() {
+            var success = $('.form-success');
+
+            $('.post-question form input[type="submit"]').click(function (e) {
+              e.preventDefault();
+              window.scrollTo(0, 0);
+              var headerHeight = $('header.primary').outerHeight();
+              var mainHeight = $('main').outerHeight();
+              var height = headerHeight + mainHeight + 5;
+              success.height(height);
+              success.addClass('active');
+              $('.form-success .modal').css('top', headerHeight);
+            });
+
+            $('.form-success button, .form-success').click(function (e) {
+              $(success).removeClass('active');
+            });
+
+            $('.form-success .modal').click(function (e) {
+              e.stopPropagation();
             });
           }
         };

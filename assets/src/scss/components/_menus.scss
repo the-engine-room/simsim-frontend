@@ -127,6 +127,51 @@ nav.secondary {
 				}
 			}
 		}
+		.icons {
+			float: right;
+			margin: 0;
+			i {
+				position: relative;
+				color: white;
+				margin: -2px 12px 0;
+				width: 10px;
+				font-size: 14px;
+				&:before {
+					position: relative;
+					z-index: 20;
+				}
+				&:after {
+					content: '';
+					width: 25px;
+					height: 25px;
+					border-radius: 50px;
+					position: absolute;
+					z-index: 10;
+					left: 0;
+					top: -5px;
+				}
+				&.fa-youtube-play {
+					margin-left: 5px;
+					&:after {
+						left: -5px;
+						background: $socialYoutube;
+					}
+				}
+				&.fa-facebook {
+					margin-left: 18px;
+					&:after {
+						left: -8px;
+						background: $socialFacebook;
+					}
+				}				
+				&.fa-twitter {
+					&:after {
+						left: -6px;
+						background: $socialTwitter;
+					}
+				}
+			}
+		}		
 	}
 }
 

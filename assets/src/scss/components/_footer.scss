@@ -14,6 +14,7 @@ section.newsletter {
 		padding-top: 22px;
 		input {
 			@include columns(4);
+			border-radius: 0;
 			&:not([type=submit]) {
 				background: transparent;
 				border: 1px solid white;
@@ -29,7 +30,7 @@ section.newsletter {
 	float: left;
 	
 	img {
-		width: 123px;
+		width: 123px; 
 		height: 47px;
 	}
 }
