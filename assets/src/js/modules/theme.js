@@ -84,7 +84,7 @@
 
             $('.form-success .modal').click(function(e) {
                 e.stopPropagation();
-            })
+            });
         }
     };
     

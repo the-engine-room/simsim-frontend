@@ -168,7 +168,8 @@ meter {
     }
 }
 .dropdowns {
-    
+    position: relative;
+    z-index: 80;
     .dropdown-wrapper{
 
         padding: 0 0 28px;

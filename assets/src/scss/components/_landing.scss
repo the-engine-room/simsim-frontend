@@ -1,0 +1,151 @@
+//
+// Landing
+// --------------------------------------------------
+
+body.landing {
+	main {
+		margin-top: 0;
+		padding: 0;
+	}
+
+	.vos-questions {
+		padding: 48px 0 66px;
+		.btn-wrapper {
+			clear: left;
+			text-align: center;
+			padding-top: 50px;
+			> .button-primary {
+				padding: 1.22rem 4rem;
+			}				
+		}
+	}
+}
+
+section.introduction {
+	background: $navColor;
+	padding: 69px 0 63px;
+	text-align: center;
+
+	h1 {
+		color: white;
+		font-family: $paragraphFont;
+		font-size: 38px;
+		text-transform: none;
+		font-weight: 400;
+	}
+
+	.landing >p {
+		color: white;
+		margin-top: 22px;
+	}
+
+	.calls-to-action {
+		@include columns(10.8,0.6,0);		
+		margin-top: 69px;
+
+		.cto {
+			@include columns(4);
+			position: relative;
+			a {
+				@include overlay-link();
+			}
+			img {
+				position: relative;
+				z-index: 30;
+			}
+			p {
+				position: absolute;
+				z-index: 40;
+				top: 23px;
+				left: 0;
+				width: 100%;
+				font-size: 22px;
+				font-weight: 700;
+				margin: 0;
+			}
+			
+		}
+	}
+}
+
+section.teasers {
+	background: $inputColor;
+
+	.nouvelles-reponses, .publications {
+		@include columns(10.8,0.6);
+		padding: 35px 0 0;		
+	}	
+
+	.teaser {
+		@include columns(4.5,1);
+		&:nth-child(odd) {
+			@include columns(4.5,1.8);
+		}
+		position: relative;
+		margin-top: 40px;
+
+		.title {
+			@include title();
+			color: $primaryColor;
+			font-size: 12px;
+			margin-top: 5px;
+			margin-bottom: 0;
+		}
+
+		.avatar {
+			@include avatar();
+
+		}
+
+		.videoWrapper {
+			margin: 20px 0;
+			padding-bottom: 49.5%; /* most videos I found were of this aspect ratio */
+		}
+
+		p.readmore {
+			@include title();
+			font-size: 10px;
+			text-align: right;
+			i {
+				color: $navColor;
+				font-size: 12px;
+				margin: -1px 0 0 5px;
+			}
+			a {
+				color: $textColor;
+			}
+		}
+	}
+	.publications {
+		padding-bottom: 50px;
+
+		.teaser {
+			height: 200px;
+			background: white;
+		}
+	}
+}
+
+section.teasers .blog {
+	padding: 30px 0 80px;
+	@include columns(12);
+
+	.teaser {
+		@include columns(4);
+
+		height: 200px;
+		padding: 20px;
+		background: white;
+		text-align: center;
+		position: relative;
+
+		img {
+			height: auto;
+			max-height: 100%;
+		}
+
+		a {
+			@include overlay-link();
+		}
+	}
+}

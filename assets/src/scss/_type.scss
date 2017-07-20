@@ -16,22 +16,22 @@
 
 @mixin h2 {
 	@include heading-font();
-	@include font-size(32);
+	@include font-size(24);
 }
 
 @mixin h3 {
 	@include heading-font();
-	@include font-size(26);
+	@include font-size(20);
 }
 
 @mixin h4 {
 	@include heading-font();
-	@include font-size(22);
+	@include font-size(18);
 }
 
 @mixin h5 {
 	@include heading-font();
-	@include font-size(20);
+	@include font-size(16);
 }
 
 @mixin h6 {

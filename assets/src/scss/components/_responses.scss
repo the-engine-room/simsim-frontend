@@ -28,12 +28,12 @@ div.responses-list {
 				background: $yellow;
 				color: white;
 				position: relative;
-				padding: 6px 10px 7px;
+				padding: 4px 10px 6px;
 				border-radius:4px;
 				.fa-comments {
 					position: absolute;
-					top: 5px;
-					left: 8px;
+					top: 6px;
+					left: 10px;
 					font-size: 24px;
 				}
 				.score-number {
@@ -45,7 +45,7 @@ div.responses-list {
 						font-family: $headingFont;
 					}
 					.label {
-						margin: 3px 0 0;
+						margin: 1px 0 0;
 						font-size: 5px;
 						font-weight: 700;
 					}

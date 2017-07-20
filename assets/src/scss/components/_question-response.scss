@@ -7,11 +7,8 @@ div.questions-wrapper {
 }
 div.questions {
 	.filter, .meta {
-		font-family: $headingFont;
 		font-size: 10px;
-		text-transform: uppercase;
-		letter-spacing: 1.3px;
-		font-weight: 700;
+		@include title();
 	}
 	.filter {
 		float: right;
@@ -36,9 +33,12 @@ div.questions {
 		.meta {
 			float: left;
 			width: 100%;
-			margin-bottom: 10px;
+			margin-bottom: 5px;
+			position: relative;
+			z-index: 30;
 			> div {
 				float: left;
+				padding-bottom: 5px;
 				&.date {
 					float: right;
 				}
@@ -58,9 +58,6 @@ div.questions {
 					border-radius: 2px;
 				}
 			}
-			.share {
-				margin-left: 32px;
-			}
 			a {
 				color: $textColor;
 				&:hover {
@@ -74,6 +71,7 @@ div.questions {
 		.question-content {
 			clear: left;
 			position: relative;
+			z-index: 10;
 			.avatar {
 				position: absolute;
 				top: 0;
@@ -96,10 +94,7 @@ div.questions {
 				.author {
 					margin: 0;
 					a {
-						text-transform: uppercase;
-						font-weight: 700;
-						font-family: $headingFont;
-						letter-spacing: 1.3px;
+						@include title();
 					}
 				}
 			}

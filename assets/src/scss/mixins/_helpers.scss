@@ -156,3 +156,30 @@
     color: $navColor;
     font-size: 20px;	
 }
+
+@mixin avatar() {
+	position: absolute;
+	top: 0;
+	left: -100px;
+	img {
+		width: 69px;
+		height: 69px;
+		border-radius: 100px;
+	}	
+}
+
+@mixin title() {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: $headingFont;
+	letter-spacing: 1.3px;	
+}
+
+@mixin overlay-link() {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 50;	
+}
