@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 body.landing {
+
 	main {
 		margin-top: 0;
 		padding: 0;
@@ -10,10 +11,12 @@ body.landing {
 
 	.vos-questions {
 		padding: 48px 0 66px;
+
 		.btn-wrapper {
 			clear: left;
 			text-align: center;
 			padding-top: 40px;
+
 			> .button-primary {
 				padding: 1.22rem 4rem;
 			}				
@@ -41,18 +44,23 @@ section.introduction {
 
 	.calls-to-action {
 		@include columns(10.8,0.6,0);		
+
 		margin-top: 69px;
 
 		.cto {
 			@include columns(4);
+
 			position: relative;
+
 			a {
 				@include overlay-link();
 			}
+
 			img {
 				position: relative;
 				z-index: 30;
 			}
+
 			p {
 				position: absolute;
 				z-index: 40;
@@ -73,19 +81,23 @@ section.teasers {
 
 	.nouvelles-reponses, .publications {
 		@include columns(10.8,0.6);
+
 		padding: 35px 0 0;		
 	}	
 
 	.teaser {
 		@include columns(4.5,1);
-		&:nth-child(odd) {
-			@include columns(4.5,1.8);
-		}
+
 		position: relative;
 		margin-top: 40px;
 
+		&:nth-child(odd) {
+			@include columns(4.5,1.8);
+		}
+
 		.title {
 			@include title();
+
 			color: $primaryColor;
 			font-size: 12px;
 			margin-top: 5px;
@@ -104,18 +116,22 @@ section.teasers {
 
 		p.readmore {
 			@include title();
+
 			font-size: 10px;
 			text-align: right;
+
 			i {
 				color: $navColor;
 				font-size: 12px;
 				margin: -1px 0 0 5px;
 			}
+
 			a {
 				color: $textColor;
 			}
 		}
 	}
+
 	.publications {
 		padding-bottom: 50px;
 
@@ -127,8 +143,9 @@ section.teasers {
 }
 
 section.teasers .blog {
-	padding: 30px 0 80px;
 	@include columns(12);
+
+	padding: 30px 0 80px;
 
 	.teaser {
 		@include columns(4);

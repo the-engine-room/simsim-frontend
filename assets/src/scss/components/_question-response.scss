@@ -6,19 +6,25 @@ div.questions-wrapper {
 	@include columns(9,2);
 }
 div.questions {
+
 	.filter, .meta {
-		font-size: 10px;
 		@include title();
+
+		font-size: 10px;
+		
 	}
 	.filter {
 		float: right;
 		margin: 0.8rem 0 2.6rem;
 		color: $navColor;
+
 		a {
 			color: $textColor;
+
 			&:not(.active) {
 				color: $navColor;
 			}
+
 			&:hover {
 				color: $primaryColor;
 			}			
@@ -26,29 +32,36 @@ div.questions {
 	}
 	.comment {
 		clear: both;
+
 		&.question:not(:nth-child(2)) {
 			padding-top: 40px;
 			border-top: 1px solid $navColor;
 		}
+
 		.meta {
 			float: left;
 			width: 100%;
 			margin-bottom: 5px;
 			position: relative;
 			z-index: 30;
+
 			> div {
 				float: left;
 				padding-bottom: 5px;
+
 				&.date {
 					float: right;
 				}
 			}
+
 			i {
 				color: $navColor;
 				font-size: 12px;
 				margin: -1px 2px 0 0;
 			}
+
 			.likes {
+
 				.count {
 					display: inline-block;
 					padding: 4px 7px 3px;
@@ -60,8 +73,10 @@ div.questions {
 			}
 			a {
 				color: $textColor;
+
 				&:hover {
 					color: $primaryColor;
+
 					i {
 						color: $primaryColor;
 					}
@@ -72,10 +87,12 @@ div.questions {
 			clear: left;
 			position: relative;
 			z-index: 10;
+
 			.avatar {
 				position: absolute;
 				top: 0;
 				left: -100px;
+
 				img {
 					width: 69px;
 					height: 69px;
@@ -84,15 +101,18 @@ div.questions {
 			}
 			.textarea {
 				min-height: 0;
+
 				p {
 					font-size: 14px;
 					line-height: 1.4;
+
 					&:last-of-type {
 						margin-bottom: 0;
 					}
 				}
 				.author {
 					margin: 0;
+
 					a {
 						@include title();
 					}
@@ -102,6 +122,7 @@ div.questions {
 	}
 	.comment.response {
 		@include columns(10.6,1.4,0);
+		
 		margin-bottom: 20px;
 	}
 }

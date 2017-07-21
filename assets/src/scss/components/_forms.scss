@@ -8,6 +8,7 @@
 
 form {
     display: block;
+
     &.dropdowns {
         padding: 29px 0 0;
     }
@@ -36,6 +37,7 @@ label {
     letter-spacing: 1.5px;
     font-size: 10px;
     color: $navColor;
+
     &.checkbox {
         color: $textColor;
         font-size: 14px;
@@ -43,6 +45,7 @@ label {
         text-transform: none;
         font-weight: 400;
         letter-spacing: normal;
+
         &.half {
             width: 47%;
             margin-right: 3%;
@@ -160,8 +163,10 @@ meter {
     &.post-question form input.button-primary {
         float: right;
     }
+
     &.vos-questions .dropdowns .dropdown-wrapper {
         @include columns(5.5,0,0);
+
         &:nth-of-type(even) {
             @include columns(6,0.5,0)
         }  
@@ -170,17 +175,20 @@ meter {
 .dropdowns {
     position: relative;
     z-index: 80;
-    .dropdown-wrapper{
 
+    .dropdown-wrapper{
         padding: 0 0 28px;
         position: relative;
         z-index: 10;
+
         &.active {
             z-index: 20;
+
             .select {
                 border: 1px solid darken($baseColor, 3%);
             }
         }
+
         .select {
             padding: 19px 18px;
             position: relative;
@@ -188,19 +196,24 @@ meter {
             border-radius: 10px;
             height: 54px;
             border: 1px solid transparent;
+
             &:hover {
                 border: 1px solid darken($baseColor, 3%);
             }
+
             &:focus {
                 border: 1px solid darken($baseColor, 5%);
             }            
         }  
+
         .select.chosen {
             color: #333;
         }    
+
         .select .down-icon {
             @include down-arrow();
         }
+
         .dropdown {
             font-size: 14px;
 
@@ -208,14 +221,17 @@ meter {
                 cursor: pointer;
             }
         }
+
         .disabled{
             pointer-events: none;
         }
+
         .hide{
             opacity:0;
             visibility: hidden;
         }
     }
+
     .button-primary {
         clear: left;
     }
@@ -239,14 +255,16 @@ ul.dropdown-menu{
     border-bottom: 1px solid darken($baseColor, 3%);
     border-right: 1px solid darken($baseColor, 3%);
 
-    li{
+    li {
         padding:10px 0px;
         list-style: none;
+
         &:hover {
             a {
                 text-decoration: underline;
             }
         }
+
         a {
             font-size: 14px;
         }
@@ -264,10 +282,12 @@ ul.dropdown-menu{
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.15s linear;
+
     &.active {
         visibility: visible;
         opacity: 1;
     }
+
     .modal {
         position: absolute;
         left: 50%;
@@ -279,11 +299,13 @@ ul.dropdown-menu{
         text-align: center;
         box-shadow: 0 37px 61px 22px rgba(0,0,0,0.12);
         border-radius: 4px;
+
         p {
             margin: 14px 0;
             font-size: 1rem;
             line-height: 1.7;
         }
+        
         button {
             margin-bottom: 0;
         }

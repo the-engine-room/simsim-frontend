@@ -24,16 +24,20 @@ ul[class*="menu-"] {
 
 nav.primary {
 	@include columns(10.4);
+
 	border-top: 1px solid rgba(152,178,183,0.4);
 	padding-top: 40px;
+
 	ul {
 		margin: 0;
 		padding: 0;
 		float: left;
+
 		li {
 			list-style: none;
 			display: inline-block;
 			padding: 0 10px;
+
 			a {
 				color: $navColor;
 				font-family: $headingFont;
@@ -44,6 +48,7 @@ nav.primary {
 			}
 		}
 	}
+
 	button {
 		float: left;
 		margin-left: 10px;
@@ -56,69 +61,125 @@ nav.primary {
 
 nav.secondary {
 	@include columns(12);
+
 	padding: 30px 0 33px;
 
 	.language-choice {
 		@include columns(2,0,0);
+
 		margin-top: -6px;
 		position: relative;
+
 		ul {
 			margin: 0;
-			padding: 6px;
-			width: 152px;
+			padding: 0;
 			height: 24px;
+			overflow: hidden;
 			position: relative;
-			border: 1px solid rgba(152,178,183,0.5);
+			width: 152px;
+
 			li {
 				list-style: none;
 				text-transform: uppercase;
+				padding: 6px 6px 6px 2px;
+				width: 152px;
+				height: 24px;
+				border-bottom: 1px solid rgba(152,178,183,0.5);	
+				border-left: 1px solid rgba(152,178,183,0.5);	
+				border-right: 1px solid rgba(152,178,183,0.5);	
+
+				&:first-of-type {
+					border-top: 1px solid rgba(152,178,183,0.5);				
+				}
+
+				img {
+					margin-top: -4px;
+					padding-right: 10px;
+				}
+
 				a {
 					color: $navColor;
 					font-size: 10px;
 					font-weight: 700;
 					letter-spacing: 1.3px;
+
+					&:hover {
+						color: $primaryColor;
+					}
 				}
 			}
-		}
-		.down-icon {
-			@include down-arrow();
-			top: 1px;
-			right: 5px;
+
+			&:hover {
+				overflow: visible;
+
+				.down-icon {
+					color: $primaryColor;
+				}
+			}
+
+			.down-icon {
+				@include down-arrow();
+
+				top: 2px;
+				right: 5px;
+			}			
 		}
 	}
+
 	.submenu {
 		@include columns(7,3);
+
 		float: right;
+
 		.search-box {
-			width: 169px;
-			height: 24px;
 			float: right;
 			margin-top: -6px;
 			margin-right: 3px;
 			position: relative;
-			border: 1px solid rgba(152,178,183,0.5);
+
+			&:hover {
+
+				.fa-search {
+					color: $primaryColor;
+				}
+			}
+			
+			input {
+				width: 169px;
+				height: 24px;
+				border: 1px solid rgba(152,178,183,0.5);
+				padding: 0 20px 0 3px;
+				background: white;
+				border-radius: 0;
+
+			}
+
 			.fa-search {
 				color: $navColor;
 				position: absolute;
-				top: 3px;
+				top: 4px;
 				right: 5px;
 				font-size: 15px;
 			}
 		}
+
 		ul {
 			margin: 0;
 			padding: 0;
 			float: right;
+
 			li {
 				list-style: none;
 				display: inline-block;
 				padding: 0 16px;
+
 				a {
 					color: $navColor;
 					text-transform: uppercase;
 					font-weight: 700;
 					font-size: 10px;
 					letter-spacing: 1.5px;
+
 					.fa-user {
 						font-size: 15px;
 						margin-top: -2px;
@@ -127,19 +188,23 @@ nav.secondary {
 				}
 			}
 		}
+
 		.icons {
 			float: right;
 			margin: 0;
+
 			i {
 				position: relative;
 				color: white;
 				margin: -2px 12px 0;
 				width: 10px;
 				font-size: 14px;
+
 				&:before {
 					position: relative;
 					z-index: 20;
 				}
+
 				&:after {
 					content: '';
 					width: 25px;
@@ -150,21 +215,27 @@ nav.secondary {
 					left: 0;
 					top: -5px;
 				}
+
 				&.fa-youtube-play {
 					margin-left: 5px;
+
 					&:after {
 						left: -5px;
 						background: $socialYoutube;
 					}
 				}
+
 				&.fa-facebook {
 					margin-left: 18px;
+
 					&:after {
 						left: -8px;
 						background: $socialFacebook;
 					}
-				}				
+				}	
+
 				&.fa-twitter {
+
 					&:after {
 						left: -6px;
 						background: $socialTwitter;
@@ -178,16 +249,19 @@ nav.secondary {
 .icons {
 	float: right;
 	margin: 0;
+
 	i {
 		position: relative;
 		color: white;
 		margin: -2px 12px 0;
 		width: 10px;
 		font-size: 14px;
+
 		&:before {
 			position: relative;
 			z-index: 20;
 		}
+
 		&:after {
 			content: '';
 			width: 25px;
@@ -198,48 +272,62 @@ nav.secondary {
 			left: 0;
 			top: -5px;
 		}
+
 		&.fa-youtube-play {
 			margin-left: 5px;
+
 			&:after {
 				left: -5px;
 				background: $socialYoutube;
 			}
 		}
+
 		&.fa-facebook {
 			margin-left: 18px;
+
 			&:after {
 				left: -8px;
 				background: $socialFacebook;
 			}
-		}				
+		}
+
 		&.fa-twitter {
+
 			&:after {
 				left: -6px;
 				background: $socialTwitter;
 			}
 		}	
 	}
+
 	&.share-list i {
+
 		&:after {
 			top: -4px;
 		}
+
 		&.fa-facebook {
 			margin-left: 0;
 			padding-left: 1px;
+
 			&:after {
 				left: -4px;
 				background: $socialFacebook;
 			}
-		}				
+		}		
+
 		&.fa-twitter {
+
 			&:after {
 				margin-left: 0;
 				left: -4px;
 				background: $socialTwitter;
 			}
 		}	
+
 		&.fa-envelope {
 			margin-left: -1px;
+
 			&:after {
 				left: -4px;
 				background: $socialEmail;
@@ -251,6 +339,7 @@ nav.secondary {
 .comment .meta .share {
 	margin-left: 32px;
 	position: relative;
+
 	ul {
 		position: absolute;
 		top: 13px;
@@ -272,22 +361,27 @@ nav.secondary {
 			font-size: 10px;
 			color: $navColor;
 			padding: 8px 0;
+
 			&:first-child {
 				border-bottom: 1px solid rgba(152,178,183,0.50);
 				padding: 8px 0 5px;
 				margin-bottom:4px;
 			}
+
 			a {
 				color: $navColor;
+
 				i {
 					color: white;
 					font-size: 8.8px;
 					margin-top: 1px;
 					margin-left: 5px;
 					margin-right: 9px;
+
 					&.fa-envelope {
 						font-size: 8.3px;
 					}
+
 					&:after {
 						width: 16px;
 						height: 16px;
@@ -296,10 +390,13 @@ nav.secondary {
 			}
 		}
 	}
+
 	&:hover {
+
 		ul {
 			visibility: visible;
 			opacity: 1;
+			
 			li a i {
 				color: white;
 			}

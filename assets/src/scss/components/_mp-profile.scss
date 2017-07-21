@@ -1,0 +1,193 @@
+//
+// MP Profile
+// --------------------------------------------------
+
+main.mp-profile {
+
+	header {
+		background-color: #0099BC;
+		border-bottom: 7px solid #FFBE2A;
+		height: 268px;
+
+		.header-content {
+			@include columns(10.4,0.6);
+
+			position: relative;
+			padding: 69px 0;
+
+			> img {
+				float: right;
+			}
+		}
+		.response-meta {
+			@include columns(3,0,0);
+
+			position: absolute;
+			left: 0;
+			top: 22px;
+			padding: 16px 21px 10px;
+			background: white;
+			border: 1px solid rgba(152,178,183,0.40);
+			border-radius: 4px;	
+
+			h5 {
+				margin: 10px 0 8px;	
+				font-size: 10px;
+				font-size: 400;
+				letter-spacing: 1.5px;
+			}
+			
+			.score {
+				width: 120px;
+				margin: 0 auto;
+			}
+
+			> img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.profile-select {
+		padding: 22px 0 40px;
+		background-color: $inputColor;
+
+		.profile-content {
+			@include columns(10.4,0.6);
+
+			h1 {
+				@include columns(9,3,0);
+				padding-left: 27px;
+			}
+
+		}
+
+		.details-wrapper {
+			float: left;
+			width: 100%;
+			border: 1px solid rgba(152,178,183,0.40);			
+			background-color: white;
+			margin-top: 26px;
+		}
+
+		.details {
+			@include columns(3,0,0);
+
+			border-right: 1px solid rgba(152,178,183,0.4);
+			
+			ul {
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					background: white;
+					padding: 28px 8px;
+					border-bottom: 1px solid rgba(152,178,183,0.4);
+					line-height: 0.1;
+
+					&:last-of-type {
+						border-bottom: none;
+					}
+
+					&:not(.active) a {
+						color: $navColor;
+						&:hover {
+							color: $primaryColor;
+						}
+					}
+
+					a {
+						@include title();
+						font-size: 10px;
+					}
+				}
+			}
+		}
+
+		.description {
+			@include columns(9,0,0);
+
+			padding: 3px 38px 3px 25px;
+
+			p {
+				line-height: 1.7;
+			}
+		}
+	}
+
+	.tags-wrapper {
+		float: left;
+		width: 100%;
+		border: 1px solid rgba(152,178,183,0.40);			
+		background-color: white;
+		margin-top: 20px;
+	}	
+
+	.title {
+		@include columns(3,0,0);
+
+		position: relative;
+		min-height: 80px;
+
+		p {
+			@include title();
+
+			margin: 0;
+			position: absolute;
+			top: 42%;
+			left: 8px;
+			height: 100%;
+			width: 100%;
+			font-size: 10px;
+			color: $primaryColor;
+		}
+	}
+
+	.tags {
+		@include columns(9,0,0);	
+
+		padding: 8px 13px;
+
+		ul {
+			margin: 0;
+			padding: 0 0 0 10px;
+
+			li {
+				list-style: none;
+				display: inline-block;
+				border: 1px solid rgba(152,178,183,0.40);
+				margin: 4px 2.5px;
+
+				a {
+					color: $textColor;
+					font-size: 14px;
+					display: inline-block;
+					padding: 4px 8px;
+
+					&:hover {
+						color: $primaryColor;
+					}
+				}
+			}
+		}
+	}
+}
+
+main.mp-profile {
+
+	.vos-questions {
+		padding: 40px 0;
+
+		h1 {
+			color: $navColor;
+			font-weight: 400;
+			
+			a {
+				color: $primaryColor;
+				font-weight: 700;
+			}
+		}
+	}
+}

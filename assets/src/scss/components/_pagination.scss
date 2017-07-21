@@ -8,24 +8,28 @@ div.pagination {
 	width: 100%;
 	text-align: center;
 	font-size: 10px;
-	
 	padding: 10px 0 72px;
+
 	a {
 		@include title();
 		display: inline-block;
 		padding: 0 10px;
+
 		&:not(.current-page) {
 			color: $navColor;
 		}
+
 		.fa {
 			font-size: 16px;
 			margin-top: -5px;
 		}
 	}
+	
 	ul {
 		display: inline-block;
 		margin: 0;
 		padding: 0 30px;
+
 		li {
 			list-style: none;
 			font-size: 10px;

@@ -4,62 +4,19 @@
 
 div.responses-list {
 	@include columns(10.8,0.6,0);
+	
 	padding: 53px 0;
 
 	.response {
 		@include columns(4);
+
 		margin: 15px 0;
-		.meta {
-			background: white;
-			text-align: center;
-			float: left;
-			width:35.5%;
-			padding-top: 15px;
-			border-radius:4px;
-			img {
-				width: 69px;
-				height: 69px;
-				border-radius: 50px;
-			}
-			h5 {
-				margin: 16px 0 5px;
-			}
-			.score {
-				background: $yellow;
-				color: white;
-				position: relative;
-				padding: 4px 10px 6px;
-				border-radius:4px;
-				.fa-comments {
-					position: absolute;
-					top: 6px;
-					left: 10px;
-					font-size: 24px;
-				}
-				.score-number {
-					text-align: right;
-					.numbers {
-						margin: 0;
-						font-size: 20px;
-						font-weight: 700;
-						font-family: $headingFont;
-					}
-					.label {
-						margin: 1px 0 0;
-						font-size: 5px;
-						font-weight: 700;
-					}
-				}
-				&.inactive {
-					background: #D6D6D6;
-					color: #A3A3A3;
-				}
-			}
-		}
+
 		.details {
 			float: left;
 			width: 64.5%;
 			padding: 0 11px;
+
 			.name {
 				margin-top: 1px;
 				margin: 1px 0 4px;
@@ -69,12 +26,68 @@ div.responses-list {
 				font-size: 12px;
 				letter-spacing: 1.3px;
 			}
+
 			.description {
 				font-size: 12px;
 				color: #364A4D;
 				line-height: 1.5;
 				margin-top: 5px;
 			}
+		}
+	}
+}
+
+.response-meta {
+	background: white;
+	text-align: center;
+	float: left;
+	width:35.5%;
+	padding-top: 15px;
+	border-radius:4px;
+
+	img {
+		width: 69px;
+		height: 69px;
+		border-radius: 50px;
+	}
+
+	h5 {
+		margin: 16px 0 5px;
+	}
+
+	.score {
+		background: $yellow;
+		color: white;
+		position: relative;
+		padding: 4px 10px 5px;
+		border-radius:4px;
+
+		.fa-comments {
+			position: absolute;
+			top: 6px;
+			left: 10px;
+			font-size: 24px;
+		}
+
+		.score-number {
+			text-align: right;
+
+			.numbers {
+				margin: 0;
+				font-size: 20px;
+				font-weight: 700;
+				font-family: $headingFont;
+			}
+			
+			.label {
+				margin: 1px 0 0;
+				font-size: 5px;
+				font-weight: 700;
+			}
+		}
+		&.inactive {
+			background: #D6D6D6;
+			color: #A3A3A3;
 		}
 	}
 }
