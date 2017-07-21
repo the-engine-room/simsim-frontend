@@ -3,6 +3,8 @@
 // --------------------------------------------------
 
 main.mp-profile {
+	padding-top: 0;
+	margin-top: 0;
 
 	header {
 		background-color: #0099BC;
@@ -183,7 +185,7 @@ main.mp-profile {
 		h1 {
 			color: $navColor;
 			font-weight: 400;
-			
+
 			a {
 				color: $primaryColor;
 				font-weight: 700;
