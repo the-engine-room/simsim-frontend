@@ -63,6 +63,8 @@ nav.primary {
 nav.secondary {
 	@include columns(12);
 
+	position: relative;
+	z-index: 60;
 	padding: 30px 0 2px;
 
 	.language-choice {
@@ -85,6 +87,7 @@ nav.secondary {
 				padding: 6px 6px 6px 2px;
 				width: 152px;
 				height: 24px;
+				background: white;
 				border-bottom: 1px solid rgba(152,178,183,0.5);	
 				border-left: 1px solid rgba(152,178,183,0.5);	
 				border-right: 1px solid rgba(152,178,183,0.5);	

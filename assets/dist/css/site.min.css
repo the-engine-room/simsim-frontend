@@ -959,6 +959,8 @@ header.primary {
   width: 11.33333%;
   margin-left: 1%;
   margin-right: 1%;
+  position: relative;
+  z-index: 50;
   float: left; }
   @media (min-width: 1200px) {
     .logo {
@@ -1349,6 +1351,8 @@ nav.secondary {
   width: 98%;
   margin-left: 1%;
   margin-right: 1%;
+  position: relative;
+  z-index: 60;
   padding: 30px 0 2px; }
   @media (min-width: 1200px) {
     nav.secondary {
@@ -1413,6 +1417,7 @@ nav.secondary {
         padding: 6px 6px 6px 2px;
         width: 152px;
         height: 24px;
+        background: white;
         border-bottom: 1px solid rgba(152, 178, 183, 0.5);
         border-left: 1px solid rgba(152, 178, 183, 0.5);
         border-right: 1px solid rgba(152, 178, 183, 0.5); }
