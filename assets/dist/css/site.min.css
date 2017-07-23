@@ -993,9 +993,13 @@ header.primary {
   .logo img {
     width: 123px;
     height: 47px; }
+    @media (max-width: 1024px) {
+      .logo img {
+        width: 100px;
+        height: auto; } }
 
 @media (max-width: 1024px) {
-  .logo .img {
+  .logo img {
     width: 100px;
     height: auto; } }
 

@@ -10,6 +10,8 @@ header.primary {
 .logo {
 	@include columns(1.6);
 	@include responsive-columns('tablet', 1.5);
+	// Can use responsive-columns to overide the defaults.
+	// By using it for tablet, it also overides mobile, so you'll probably have to overide moble as well
 
 	position: relative;
 	z-index: 50;
@@ -20,14 +22,17 @@ header.primary {
 		height: 47px;
 
 		@include respond-to('tablet') {
-
+			// Can use the respond-to mixin inside selectors
+			width: 100px;
+			height: auto;
 		}
 	}
 }
 
 @include respond-to('tablet') {
+	// Or outside
 	.logo {
-		.img {
+		img {
 			width: 100px;
 			height: auto;
 		}
