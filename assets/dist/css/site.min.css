@@ -983,9 +983,21 @@ header.primary {
       width: 90%;
       margin-left: 5%;
       margin-right: 5%; } }
+  @media (max-width: 1024px) {
+    .logo {
+      display: block;
+      float: left;
+      width: 2.5%;
+      margin-left: 5%;
+      margin-right: 5%; } }
   .logo img {
     width: 123px;
     height: 47px; }
+
+@media (max-width: 1024px) {
+  .logo .img {
+    width: 100px;
+    height: auto; } }
 
 body.landing main {
   margin-top: 0;
