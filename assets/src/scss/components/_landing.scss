@@ -19,7 +19,7 @@ body.landing {
 
 			> .button-primary {
 				padding: 1.22rem 4rem;
-			}				
+			}
 		}
 	}
 }
@@ -43,7 +43,7 @@ section.introduction {
 	}
 
 	.calls-to-action {
-		@include columns(10.8,0.6,0);		
+		@include columns(10.8,0.6,0);
 
 		margin-top: 69px;
 
@@ -71,7 +71,7 @@ section.introduction {
 				font-weight: 700;
 				margin: 0;
 			}
-			
+
 		}
 	}
 }
@@ -82,8 +82,8 @@ section.teasers {
 	.nouvelles-reponses, .publications {
 		@include columns(10.8,0.6);
 
-		padding: 35px 0 0;		
-	}	
+		padding: 35px 0 0;
+	}
 
 	.teaser {
 		@include columns(4.5,1);
@@ -159,10 +159,59 @@ section.teasers .blog {
 		img {
 			height: auto;
 			max-height: 100%;
+			width: 100%;
 		}
 
 		a {
 			@include overlay-link();
+		}
+	}
+}
+
+@include respond-to('mobile') {
+	section.introduction {
+		padding: 24px 10px 48px;
+		h1 {
+			font-size: 24px;
+		}
+
+		.calls-to-action {
+			margin-top: 0px;
+			.cto {
+				margin: 24px auto;
+				width: 100%;
+			}
+		}
+	}
+	section.teasers .teaser {
+		@include columns(12, 0, 0);
+		&:nth-child(odd) {
+			@include columns(12, 0, 0);
+		}
+		.h2 {
+			font-size: 22.0px;
+		}
+		.avatar {
+			position: relative;
+			width: 69px;
+			display:block;
+			float: left;
+			left: 0;
+		}
+		p.title {
+			display: block;
+			float: left;
+			margin: 0px 0px 24px 16px;
+			line-height: 69px;
+		}
+		.videoWrapper {
+			display: block;
+			clear: both;
+		}
+		.readmore {
+			text-transform: none;
+			border-bottom: 1px solid $navColor;
+			padding-bottom: 16px;
 		}
 	}
 }

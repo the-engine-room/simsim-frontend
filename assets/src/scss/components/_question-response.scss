@@ -11,7 +11,7 @@ div.questions {
 		@include title();
 
 		font-size: 10px;
-		
+
 	}
 	.filter {
 		float: right;
@@ -27,7 +27,7 @@ div.questions {
 
 			&:hover {
 				color: $primaryColor;
-			}			
+			}
 		}
 	}
 	.comment {
@@ -80,7 +80,7 @@ div.questions {
 					i {
 						color: $primaryColor;
 					}
-				}				
+				}
 			}
 		}
 		.question-content {
@@ -122,7 +122,65 @@ div.questions {
 	}
 	.comment.response {
 		@include columns(10.6,1.4,0);
-		
+
 		margin-bottom: 20px;
+	}
+}
+
+@include respond-to('mobile'){
+	.filter {
+		width: 100%;line-height: 160%;
+
+		.mobile-break {
+			height: 0;
+			font-size: 0;
+			width: 1px;
+			display: block;
+			clear: both;
+		}
+	}
+	div.questions-wrapper {
+		@include columns(12, 0, 0);
+
+		.comment.response {
+			//@include columns(10.6,1.4,0);
+			margin-left: 15px;
+		}
+
+	}
+
+	div.questions .meta >  div a { font-size: 10px; letter-spacing: normal; }
+	div.questions .comment .meta .share .lists {}
+	div.questions .comment .date { display: none; }
+	div.questions .comment .question-content  {
+
+		.date.mobile {
+			display: block;
+			font-size: 10.0px;
+			font-weight: 700;
+		}
+
+		.avatar{
+			&.desktop { display: none; }
+			&.mobile { position: relative; left: 0; float: left; clear: left;
+				& + .author {
+					width: calc(100% - 85px);
+					float: left;
+					clear: right;
+					margin-left: 16px;
+					height: 69px;
+					margin-bottom: 10px;
+					& + p {
+						clear: both;
+						padding-top: 10px;
+					}
+					& + .videoWrapper {
+						clear: both;
+						margin-top: 10px;
+						padding-top: 10px;
+					}
+				}
+			}
+		}
 	}
 }
