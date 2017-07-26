@@ -6,7 +6,7 @@ header.primary {
 	background-color: white;
 	padding-bottom: 5px;
 }
-
+.logo.mobile { display: none; }
 .logo {
 	@include columns(1.6);
 	@include responsive-columns('tablet', 1.5);
@@ -16,7 +16,7 @@ header.primary {
 	position: relative;
 	z-index: 50;
 	float: left;
-	
+
 	img {
 		width: 123px;
 		height: 47px;
@@ -29,9 +29,12 @@ header.primary {
 	}
 }
 
-@include respond-to('tablet') {
+@include respond-to('mobile') {
+
 	// Or outside
-	.logo {
+	nav.secondary + .logo {
+		display: none; 
+
 		img {
 			width: 100px;
 			height: auto;

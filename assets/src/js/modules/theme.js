@@ -10,7 +10,9 @@
 
     Theme = {
 
-        settings: {},
+        settings: {
+          included: false
+        },
 
         /*
          * Theme init
@@ -18,10 +20,27 @@
 
         init: function() {
 
-            this.selectLists();
             this.includes();
+
+            this.selectLists();
+
             this.textareaLimit();
             this.formSuccess();
+
+            this.mobileMenu();
+
+        },
+
+        mobileMenu: function() {
+
+            $('.mobile-nav').click( function(e) {
+              e.preventDefault();
+              $('.mobile-nav-wrapper').css('display', 'block');
+            });
+            $('.mobile-nav-close').click(function(e){
+              e.preventDefault();
+              $('.mobile-nav-wrapper').hide();
+            });
 
         },
 
@@ -43,7 +62,7 @@
                     $('.dropdown').not(this).closest('.dropdown-wrapper').removeClass('active');
                     $(parent).toggleClass('active');
                     $(this).find('.dropdown-menu').toggleClass('hide');
-                }); 
+                });
             });
         },
 
@@ -51,8 +70,25 @@
             var includes = $('[data-include]');
             jQuery.each(includes, function(){
                 var file = 'inc/' + $(this).data('include') + '.html';
-                $(this).load(file);
+                // if it is the header, let's attach the mobile menu
+                if($(this).data('include') === 'header'){
+                  $(this).load(file, function(){
+                    $('.mobile-nav').click( function(e) {
+                      e.preventDefault();
+                      $('.mobile-nav-wrapper').show();
+                    });
+                    $('.mobile-nav-close').click(function(e){
+                      e.preventDefault();
+                      $('.mobile-nav-wrapper').hide();
+                    });
+                  });
+                }
+                else {
+                  $(this).load(file);
+                }
             });
+
+            return true;
         },
 
         textareaLimit: function() {
@@ -86,8 +122,10 @@
                 e.stopPropagation();
             });
         }
+
+
     };
-    
+
     module.exports = Theme;
 
 })(jQuery);

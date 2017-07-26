@@ -36,9 +36,9 @@ section.newsletter {
 	@include columns(1.6);
 
 	float: left;
-	
+
 	img {
-		width: 123px; 
+		width: 123px;
 		height: 47px;
 	}
 }
@@ -81,7 +81,7 @@ footer.primary {
 		}
 	}
 	.associates {
-		@include columns(7);	
+		@include columns(7);
 
 		div {
 			float: left;
@@ -140,10 +140,46 @@ footer.primary {
 			i {
 				padding: 0 8px;
 			}
-			
+
 			a {
 				color: $navColor;
 			}
 		}
+	}
+}
+
+@include respond-to('mobile'){
+	footer.primary{
+
+		.associates {
+			@include columns(7);
+
+			div {
+				float: left;
+				text-align: center;
+			}
+
+			.first {
+				width: 33%;
+			}
+
+			.second {
+				width: 33%;
+				img {
+					padding: 0 10px;
+				}
+			}
+
+			.third {
+				width: 33%;
+			}
+
+			img {
+				height: auto;
+				width: 100%;
+				margin-top: 20px;
+			}
+		}
+		
 	}
 }

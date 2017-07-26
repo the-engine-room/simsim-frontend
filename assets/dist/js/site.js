@@ -132,8 +132,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         exports.toByteArray = b64ToByteArray;
         exports.fromByteArray = uint8ToBase64;
       })(typeof exports === 'undefined' ? this.base64js = {} : exports);
-    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/../../node_modules/base64-js/lib/b64.js", "/../../node_modules/base64-js/lib");
-  }, { "buffer": 2, "rH1JPG": 4 }], 2: [function (require, module, exports) {
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/..\\..\\node_modules\\base64-js\\lib\\b64.js", "/..\\..\\node_modules\\base64-js\\lib");
+  }, { "buffer": 2, "e/U+97": 4 }], 2: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       /*!
        * The buffer module from node.js, for the browser.
@@ -1178,8 +1178,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       function assert(test, message) {
         if (!test) throw new Error(message || 'Failed assertion');
       }
-    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/../../node_modules/buffer/index.js", "/../../node_modules/buffer");
-  }, { "base64-js": 1, "buffer": 2, "ieee754": 3, "rH1JPG": 4 }], 3: [function (require, module, exports) {
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/..\\..\\node_modules\\buffer\\index.js", "/..\\..\\node_modules\\buffer");
+  }, { "base64-js": 1, "buffer": 2, "e/U+97": 4, "ieee754": 3 }], 3: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       exports.read = function (buffer, offset, isLE, mLen, nBytes) {
         var e, m;
@@ -1265,8 +1265,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
         buffer[offset + i - d] |= s * 128;
       };
-    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/../../node_modules/ieee754/index.js", "/../../node_modules/ieee754");
-  }, { "buffer": 2, "rH1JPG": 4 }], 4: [function (require, module, exports) {
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/..\\..\\node_modules\\ieee754\\index.js", "/..\\..\\node_modules\\ieee754");
+  }, { "buffer": 2, "e/U+97": 4 }], 4: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // shim for using process in browser
 
@@ -1332,16 +1332,16 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       process.chdir = function (dir) {
         throw new Error('process.chdir is not supported');
       };
-    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/../../node_modules/process/browser.js", "/../../node_modules/process");
-  }, { "buffer": 2, "rH1JPG": 4 }], 5: [function (require, module, exports) {
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/..\\..\\node_modules\\process\\browser.js", "/..\\..\\node_modules\\process");
+  }, { "buffer": 2, "e/U+97": 4 }], 5: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       var Theme = require('./modules/theme');
 
       jQuery(document).ready(function ($) {
         Theme.init();
       });
-    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_4c5a514e.js", "/");
-  }, { "./modules/theme": 6, "buffer": 2, "rH1JPG": 4 }], 6: [function (require, module, exports) {
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_ba2af381.js", "/");
+  }, { "./modules/theme": 6, "buffer": 2, "e/U+97": 4 }], 6: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // ------------------------------------
       //
@@ -1355,7 +1355,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
         Theme = {
 
-          settings: {},
+          settings: {
+            included: false
+          },
 
           /*
            * Theme init
@@ -1363,10 +1365,26 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
           init: function init() {
 
-            this.selectLists();
             this.includes();
+
+            this.selectLists();
+
             this.textareaLimit();
             this.formSuccess();
+
+            this.mobileMenu();
+          },
+
+          mobileMenu: function mobileMenu() {
+
+            $('.mobile-nav').click(function (e) {
+              e.preventDefault();
+              $('.mobile-nav-wrapper').css('display', 'block');
+            });
+            $('.mobile-nav-close').click(function (e) {
+              e.preventDefault();
+              $('.mobile-nav-wrapper').hide();
+            });
           },
 
           selectLists: function selectLists() {
@@ -1395,8 +1413,24 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             var includes = $('[data-include]');
             jQuery.each(includes, function () {
               var file = 'inc/' + $(this).data('include') + '.html';
-              $(this).load(file);
+              // if it is the header, let's attach the mobile menu
+              if ($(this).data('include') === 'header') {
+                $(this).load(file, function () {
+                  $('.mobile-nav').click(function (e) {
+                    e.preventDefault();
+                    $('.mobile-nav-wrapper').show();
+                  });
+                  $('.mobile-nav-close').click(function (e) {
+                    e.preventDefault();
+                    $('.mobile-nav-wrapper').hide();
+                  });
+                });
+              } else {
+                $(this).load(file);
+              }
             });
+
+            return true;
           },
 
           textareaLimit: function textareaLimit() {
@@ -1430,10 +1464,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               e.stopPropagation();
             });
           }
+
         };
 
         module.exports = Theme;
       })(jQuery);
-    }).call(this, require("rH1JPG"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/modules/theme.js", "/modules");
-  }, { "buffer": 2, "rH1JPG": 4 }] }, {}, [5]);
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/modules\\theme.js", "/modules");
+  }, { "buffer": 2, "e/U+97": 4 }] }, {}, [5]);
 //# sourceMappingURL=site.js.map
