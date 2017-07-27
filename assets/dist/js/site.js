@@ -1340,7 +1340,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       jQuery(document).ready(function ($) {
         Theme.init();
       });
-    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_ba2af381.js", "/");
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_a2234734.js", "/");
   }, { "./modules/theme": 6, "buffer": 2, "e/U+97": 4 }], 6: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // ------------------------------------
@@ -1373,6 +1373,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             this.formSuccess();
 
             this.mobileMenu();
+
+            this.mpAccordion();
           },
 
           mobileMenu: function mobileMenu() {
@@ -1463,6 +1465,38 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             $('.form-success .modal').click(function (e) {
               e.stopPropagation();
             });
+          },
+
+          mpAccordion: function mpAccordion() {
+            var detailsListElements = $('.profile-content .details ul li a');
+
+            // if desktop
+            if (window.innerWidth > 736) {
+
+              detailsListElements.click(function (e) {
+                e.preventDefault();
+
+                $('.description').removeClass('active');
+                $($(this).data('rel')).addClass('active');
+
+                detailsListElements.parent().removeClass('active');
+                $(this).parent().addClass('active');
+              });
+            }
+            // its mobile
+            else {
+                detailsListElements.click(function (e) {
+                  e.preventDefault();
+                  detailsListElements.siblings('.description').remove();
+
+                  detailsListElements.parent().removeClass('active');
+                  $(this).parent().addClass('active');
+
+                  var desc = $($(this).data('rel')).clone();
+                  desc.addClass('active');
+                  $(this).after(desc);
+                });
+              }
           }
 
         };

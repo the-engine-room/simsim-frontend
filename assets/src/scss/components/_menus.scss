@@ -481,7 +481,10 @@ nav.secondary {
 		height: 100%;
 		background-color: white;
 		z-index: 999;
-
+		.icons {
+			float: left;
+			margin: 10px;
+		}
 		button.mobile-nav-close {
 			background: white;
 			display: block;
@@ -528,6 +531,7 @@ nav.secondary {
 					font-size: 15px;
 
 				}
+
 			}
 
 			ul {

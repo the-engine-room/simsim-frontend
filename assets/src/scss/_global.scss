@@ -59,13 +59,13 @@ main {
 
 .mobile-hidden {
 	@include respond-to('mobile'){
-		 display: none;
+		 display: none !important;
 	}
 }
 
 .mobile-only {
-	display: none;
+	display: none !important;
 	@include respond-to('mobile'){
-		 display: block;
+		 display: block !important;
 	}
 }

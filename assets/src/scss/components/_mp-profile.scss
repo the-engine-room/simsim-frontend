@@ -16,12 +16,14 @@ main.mp-profile {
 
 			position: relative;
 			padding: 69px 0;
-
+			@include respond-to('mobile'){ text-align: center; }
 			> img {
 				float: right;
 				@include respond-to('mobile'){
 					max-width: 100%;
-					height: auto; 
+					height: auto;
+					float: none;
+					margin: 0px auto;
 				}
 			}
 		}
@@ -78,31 +80,48 @@ main.mp-profile {
 			width: 100%;
 			border: 1px solid rgba(152,178,183,0.40);
 			background-color: white;
+			@include respond-to('mobile'){
+				background: none;
+				border: none;
+			}
 			margin-top: 26px;
 		}
 
 		.details {
-			@include columns(3,0,0);
+			@include columns(12,0,0);
 
-			border-right: 1px solid rgba(152,178,183,0.4);
+
 
 			ul {
+				@include columns(3,0,0);
+				border-right: 1px solid rgba(152,178,183,0.4);
 				margin: 0;
 				padding: 0;
-
+				@include respond-to('mobile') {
+					border-right: none;
+				}
 				li {
 					list-style: none;
 					background: white;
 					padding: 28px 8px;
 					border-bottom: 1px solid rgba(152,178,183,0.4);
 					line-height: 0.1;
-
-					&:last-of-type {
+					@include respond-to('mobile'){
+						padding: 0;
+						clear: both;
+						text-transform: uppercase;
 						border-bottom: none;
+						background: none;
+					}
+					&:last-of-type {
+						//border-bottom: none;
 					}
 
 					&:not(.active) a {
 						color: $navColor;
+						@include respond-to('mobile'){
+							text-transform: none;
+						}
 						&:hover {
 							color: $primaryColor;
 						}
@@ -111,6 +130,16 @@ main.mp-profile {
 					a {
 						@include title();
 						font-size: 10px;
+						@include respond-to('mobile'){
+							padding: 12px 8px;
+							border: 1px solid rgba(152,178,183,0.40);
+							background-color: white;
+							display: block;
+							width: 100%;
+							line-height: 18px;
+							letter-spacing: normal;
+						}
+						i.fa { float: right; display: inline-block; font-size: 18px; }
 					}
 				}
 			}
@@ -120,9 +149,19 @@ main.mp-profile {
 			@include columns(9,0,0);
 
 			padding: 3px 38px 3px 25px;
-
+			display: none !important;
+			&.active {
+				display: block !important;
+				@include respond-to('mobile'){
+					clear: both;
+				}
+			}
 			p {
 				line-height: 1.7;
+				@include respond-to('mobile'){
+					text-transform: none;
+					font-size: 14px; 
+				}
 			}
 		}
 	}

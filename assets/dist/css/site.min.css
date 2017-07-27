@@ -294,13 +294,13 @@ main {
 
 @media (max-width: 736px) {
   .mobile-hidden {
-    display: none; } }
+    display: none !important; } }
 
 .mobile-only {
-  display: none; }
+  display: none !important; }
   @media (max-width: 736px) {
     .mobile-only {
-      display: block; } }
+      display: block !important; } }
 
 button,
 .button,
@@ -1928,6 +1928,9 @@ nav.secondary {
     height: 100%;
     background-color: white;
     z-index: 999; }
+    .mobile-nav-wrapper .icons {
+      float: left;
+      margin: 10px; }
     .mobile-nav-wrapper button.mobile-nav-close {
       background: white;
       display: block;
@@ -2079,12 +2082,17 @@ main.mp-profile {
           width: 90%;
           margin-left: 5%;
           margin-right: 5%; } }
+      @media (max-width: 736px) {
+        main.mp-profile header .header-content {
+          text-align: center; } }
       main.mp-profile header .header-content > img {
         float: right; }
         @media (max-width: 736px) {
           main.mp-profile header .header-content > img {
             max-width: 100%;
-            height: auto; } }
+            height: auto;
+            float: none;
+            margin: 0px auto; } }
     main.mp-profile header .response-meta {
       display: block;
       float: left;
@@ -2197,25 +2205,28 @@ main.mp-profile {
       border: 1px solid rgba(152, 178, 183, 0.4);
       background-color: white;
       margin-top: 26px; }
+      @media (max-width: 736px) {
+        main.mp-profile .profile-select .details-wrapper {
+          background: none;
+          border: none; } }
     main.mp-profile .profile-select .details {
       display: block;
       float: left;
-      width: 25%;
+      width: 100%;
       margin-left: 0%;
-      margin-right: 0;
-      border-right: 1px solid rgba(152, 178, 183, 0.4); }
+      margin-right: 0; }
       @media (min-width: 1200px) {
         main.mp-profile .profile-select .details {
           display: block;
           float: left;
-          width: 25%;
+          width: 100%;
           margin-left: 0%;
           margin-right: 0; } }
       @media (max-width: 1024px) {
         main.mp-profile .profile-select .details {
           display: block;
           float: left;
-          width: 25%;
+          width: 100%;
           margin-left: 0%;
           margin-right: 0; } }
       @media (max-width: 736px) {
@@ -2226,18 +2237,56 @@ main.mp-profile {
           margin-left: 0%;
           margin-right: 0; } }
       main.mp-profile .profile-select .details ul {
+        display: block;
+        float: left;
+        width: 25%;
+        margin-left: 0%;
+        margin-right: 0;
+        border-right: 1px solid rgba(152, 178, 183, 0.4);
         margin: 0;
         padding: 0; }
+        @media (min-width: 1200px) {
+          main.mp-profile .profile-select .details ul {
+            display: block;
+            float: left;
+            width: 25%;
+            margin-left: 0%;
+            margin-right: 0; } }
+        @media (max-width: 1024px) {
+          main.mp-profile .profile-select .details ul {
+            display: block;
+            float: left;
+            width: 25%;
+            margin-left: 0%;
+            margin-right: 0; } }
+        @media (max-width: 736px) {
+          main.mp-profile .profile-select .details ul {
+            display: block;
+            float: left;
+            width: 100%;
+            margin-left: 0%;
+            margin-right: 0; } }
+        @media (max-width: 736px) {
+          main.mp-profile .profile-select .details ul {
+            border-right: none; } }
         main.mp-profile .profile-select .details ul li {
           list-style: none;
           background: white;
           padding: 28px 8px;
           border-bottom: 1px solid rgba(152, 178, 183, 0.4);
           line-height: 0.1; }
-          main.mp-profile .profile-select .details ul li:last-of-type {
-            border-bottom: none; }
+          @media (max-width: 736px) {
+            main.mp-profile .profile-select .details ul li {
+              padding: 0;
+              clear: both;
+              text-transform: uppercase;
+              border-bottom: none;
+              background: none; } }
           main.mp-profile .profile-select .details ul li:not(.active) a {
             color: #98B2B7; }
+            @media (max-width: 736px) {
+              main.mp-profile .profile-select .details ul li:not(.active) a {
+                text-transform: none; } }
             main.mp-profile .profile-select .details ul li:not(.active) a:hover {
               color: #E86D15; }
           main.mp-profile .profile-select .details ul li a {
@@ -2246,13 +2295,27 @@ main.mp-profile {
             font-family: "Montserrat", sans-serif;
             letter-spacing: 1.3px;
             font-size: 10px; }
+            @media (max-width: 736px) {
+              main.mp-profile .profile-select .details ul li a {
+                padding: 12px 8px;
+                border: 1px solid rgba(152, 178, 183, 0.4);
+                background-color: white;
+                display: block;
+                width: 100%;
+                line-height: 18px;
+                letter-spacing: normal; } }
+            main.mp-profile .profile-select .details ul li a i.fa {
+              float: right;
+              display: inline-block;
+              font-size: 18px; }
     main.mp-profile .profile-select .description {
       display: block;
       float: left;
       width: 75%;
       margin-left: 0%;
       margin-right: 0;
-      padding: 3px 38px 3px 25px; }
+      padding: 3px 38px 3px 25px;
+      display: none !important; }
       @media (min-width: 1200px) {
         main.mp-profile .profile-select .description {
           display: block;
@@ -2274,8 +2337,17 @@ main.mp-profile {
           width: 100%;
           margin-left: 0%;
           margin-right: 0; } }
+      main.mp-profile .profile-select .description.active {
+        display: block !important; }
+        @media (max-width: 736px) {
+          main.mp-profile .profile-select .description.active {
+            clear: both; } }
       main.mp-profile .profile-select .description p {
         line-height: 1.7; }
+        @media (max-width: 736px) {
+          main.mp-profile .profile-select .description p {
+            text-transform: none;
+            font-size: 14px; } }
   main.mp-profile .tags-wrapper {
     float: left;
     width: 100%;
