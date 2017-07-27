@@ -21,25 +21,27 @@
             <header>
                 <div class="container">
                     <div class="header-content">
+                        <img src="assets/dist/img/movement.populaire.png">
                         <div class="response-meta">
                             <img src="assets/dist/img/mp-profile.png">
-                            <h5>TAUX DE RÉPONSE</h5>
+                            <h5 class="mobile-hidden">TAUX DE RÉPONSE</h5>
+                            <p class="mobile-only response-rate">réponse / question</p>
                             <div class="score">
-                                <i class="fa fa-comments" aria-hidden="true"></i>
+                                <span class=" mobile-hidden"><i class="fa fa-comments" aria-hidden="true"></i></span>
                                 <div class="score-number">
                                     <p class="numbers">
-                                        20/20
+                                        20 / 20
                                     </p>
-                                    <p class="label">
+                                    <p class="label mobile-hidden">
                                         RÉPONSES/QUESTIONS
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <img src="assets/dist/img/movement.populaire.png">
+
                     </div>
                 </div>
-            </header>   
+            </header>
 
             <section class="profile-select">
                 <div class="container">
@@ -77,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-            </section>   
+            </section>
 
 
             <div class="container">
@@ -94,7 +96,7 @@
             WebFontConfig = {
                 google: {
                     families: ['Lato:400,700', 'Montserrat:400,700']
-                }           
+                }
             };
 
             (function(d) {

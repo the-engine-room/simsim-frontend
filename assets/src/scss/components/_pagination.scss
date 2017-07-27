@@ -24,7 +24,7 @@ div.pagination {
 			margin-top: -5px;
 		}
 	}
-	
+
 	ul {
 		display: inline-block;
 		margin: 0;
@@ -35,4 +35,18 @@ div.pagination {
 			font-size: 10px;
 		}
 	}
+}
+
+@include respond-to('mobile'){
+
+	div.pagination {
+		padding: 10px 0px 60px;
+		ul {
+			padding: 0px 15px;
+			li a {
+				letter-spacing: normal;
+			}
+		}
+	}
+
 }

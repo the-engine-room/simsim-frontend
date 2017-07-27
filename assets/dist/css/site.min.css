@@ -280,6 +280,10 @@ main {
   padding-top: 25px;
   margin: 30px 40px;
   height: 0; }
+  @media (max-width: 736px) {
+    .videoWrapper {
+      margin: 15px 0px 0px;
+      padding-bottom: 53%; } }
 
 .videoWrapper iframe {
   position: absolute;
@@ -287,6 +291,16 @@ main {
   left: 0;
   width: 100%;
   height: 100%; }
+
+@media (max-width: 736px) {
+  .mobile-hidden {
+    display: none; } }
+
+.mobile-only {
+  display: none; }
+  @media (max-width: 736px) {
+    .mobile-only {
+      display: block; } }
 
 button,
 .button,
@@ -331,6 +345,12 @@ input.button-primary {
   .button-primary a,
   input.button-primary a {
     color: white; }
+  @media (max-width: 736px) {
+    button.primary,
+    .button-primary,
+    input.button-primary {
+      width: 100%;
+      text-transform: lowercase; } }
 
 button.secondary,
 .button-secondary,
@@ -2061,6 +2081,10 @@ main.mp-profile {
           margin-right: 5%; } }
       main.mp-profile header .header-content > img {
         float: right; }
+        @media (max-width: 736px) {
+          main.mp-profile header .header-content > img {
+            max-width: 100%;
+            height: auto; } }
     main.mp-profile header .response-meta {
       display: block;
       float: left;
@@ -2095,6 +2119,9 @@ main.mp-profile {
           width: 100%;
           margin-left: 0%;
           margin-right: 0; } }
+      @media (max-width: 736px) {
+        main.mp-profile header .response-meta {
+          position: relative; } }
       main.mp-profile header .response-meta h5 {
         margin: 10px 0 8px;
         font-size: 10px;
@@ -2377,6 +2404,14 @@ div.pagination {
       list-style: none;
       font-size: 10px; }
 
+@media (max-width: 736px) {
+  div.pagination {
+    padding: 10px 0px 60px; }
+    div.pagination ul {
+      padding: 0px 15px; }
+      div.pagination ul li a {
+        letter-spacing: normal; } }
+
 div.questions-wrapper {
   display: block;
   float: left;
@@ -2582,7 +2617,17 @@ div.questions .comment.response {
       div.questions .comment .question-content .avatar.mobile + .author + .videoWrapper {
         clear: both;
         margin-top: 10px;
-        padding-top: 10px; } }
+        padding-top: 10px; }
+  .response-rate {
+    font-size: 8.0px;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #98B2B7; }
+  .numbers {
+    text-align: center; } }
 
 div.responses-list {
   display: block;

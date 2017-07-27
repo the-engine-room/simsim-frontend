@@ -18,7 +18,7 @@ input[type="reset"] {
     text-decoration: none;
     font-family: inherit;
     font-size: 1rem;
-    
+
     &.huge{
         font-size: 1.25rem;
         font-weight: 600;
@@ -30,6 +30,10 @@ button.primary,
 .button-primary,
 input.button-primary {
 	@include button-style();
+  @include respond-to('mobile'){
+    width: 100%;
+    text-transform: lowercase;
+  }
 }
 
 button.secondary,

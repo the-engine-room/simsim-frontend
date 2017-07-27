@@ -104,15 +104,15 @@
 	::-webkit-input-placeholder {@content}
 	:-moz-placeholder           {@content}
 	::-moz-placeholder          {@content}
-	:-ms-input-placeholder      {@content}  
+	:-ms-input-placeholder      {@content}
 }
 
-@mixin font-size($targetSize: 16) {    
+@mixin font-size($targetSize: 16) {
     font-size: $targetSize + px;
     font-size: ($targetSize / $baseFontSize) + rem;
 }
 
-@mixin line-height($targetSize: 16) {    
+@mixin line-height($targetSize: 16) {
     line-height: $targetSize + px;
     line-height: ($targetSize / $baseFontSize) + rem;
 }
@@ -121,29 +121,29 @@
 // -------------------
 
 @mixin arrow-up($size: 5px, $color: #000) {
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: $size solid transparent;
 	border-right: $size solid transparent;
 	border-bottom: $size solid $color;
 }
 @mixin arrow-down($size: 5px, $color: #000) {
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: $size solid transparent;
 	border-right: $size solid transparent;
 	border-top: $size solid $color;
 }
 @mixin arrow-left($size: 5px, $color: #000) {
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-top: $size solid transparent;
-	border-bottom: $size solid transparent; 
-	border-right: $size solid $color; 
+	border-bottom: $size solid transparent;
+	border-right: $size solid $color;
 }
 @mixin arrow-right($size: 5px, $color: #000) {
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-top: $size solid transparent;
 	border-bottom: $size solid transparent;
 	border-left: $size solid $color;
@@ -154,7 +154,7 @@
     right: 26px;
     top: 17px;
     color: $navColor;
-    font-size: 20px;	
+    font-size: 20px;
 }
 
 @mixin avatar() {
@@ -165,14 +165,14 @@
 		width: 69px;
 		height: 69px;
 		border-radius: 100px;
-	}	
+	}
 }
 
 @mixin title() {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-family: $headingFont;
-	letter-spacing: 1.3px;	
+	letter-spacing: 1.3px;
 }
 
 @mixin overlay-link() {
@@ -181,5 +181,5 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 50;	
+	z-index: 50;
 }
