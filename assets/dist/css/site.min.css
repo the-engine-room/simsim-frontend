@@ -720,6 +720,13 @@ label {
       margin-right: 3%;
       float: left; }
 
+@media (max-width: 736px) {
+  .post-question .checkbox.half {
+    width: 97%; }
+    .post-question .checkbox.half a {
+      display: inline;
+      vertical-align: baseline; } }
+
 textarea,
 .textarea,
 input[type="text"],

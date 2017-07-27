@@ -53,7 +53,14 @@ label {
         }
     }
 }
-
+@include respond-to('mobile'){
+  .post-question .checkbox.half {
+    width: 97%;
+    a {
+      display: inline; vertical-align: baseline;
+    }
+  }
+}
 
 
 // Form Elements
@@ -158,7 +165,7 @@ meter {
 
         &:nth-of-type(even) {
             @include columns(5.5,0.8,0)
-        }   
+        }
     }
     &.post-question form input.button-primary {
         float: right;
@@ -169,7 +176,7 @@ meter {
 
         &:nth-of-type(even) {
             @include columns(6,0.5,0)
-        }  
+        }
     }
 }
 .dropdowns {
@@ -203,12 +210,12 @@ meter {
 
             &:focus {
                 border: 1px solid darken($baseColor, 5%);
-            }            
-        }  
+            }
+        }
 
         .select.chosen {
             color: #333;
-        }    
+        }
 
         .select .down-icon {
             @include down-arrow();
@@ -268,7 +275,7 @@ ul.dropdown-menu{
         a {
             font-size: 14px;
         }
-    }  
+    }
 }
 
 .form-success {
@@ -305,7 +312,7 @@ ul.dropdown-menu{
             font-size: 1rem;
             line-height: 1.7;
         }
-        
+
         button {
             margin-bottom: 0;
         }
