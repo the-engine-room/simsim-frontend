@@ -70,7 +70,7 @@
             jQuery.each(includes, function(){
                 var file = 'inc/' + $(this).data('include') + '.html';
                 // if it is the header, let's attach the mobile menu
-                if($(this).data('include') === 'header'){
+                if($(this).data('include') === 'header' || $(this).data('include') === 'header-ar'){
                   $(this).load(file, function(){
 
                     $('.mobile-nav').click( function(e) {

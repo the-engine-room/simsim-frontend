@@ -39,6 +39,18 @@ html[dir="rtl"] {
       float: left;
     }
   }
+  nav.secondary button.mobile-nav, .mobile-nav-wrapper button.mobile-nav-close {
+    float: right;
+  }
+  nav.secondary .logo.mobile img {
+    margin-right: 30px;
+  }
+
+
+.mobile-nav-wrapper .submenu .search-box {
+  float: right;
+}
+
   nav.secondary {
     .submenu {
       margin-right: 24%;
@@ -96,11 +108,27 @@ html[dir="rtl"] {
     width: 35.5%;
     margin-right: 9.33333%;
     margin-left: 1%;
+    @include respond-to('mobile'){
+      margin-right: 1%;
+      width: 98%;
+    }
 
     .avatar {
       position: absolute;
       top: 0;
-      right: -100px
+      right: -100px;
+      @include respond-to('mobile'){
+        position: relative;
+        right: 0;
+        float: right;
+      }
+    }
+    p.title {
+      @include respond-to('mobile'){
+        float: right;
+        margin-right: 17px;
+        font-size: 12px;
+      }
     }
   }
   section.teasers .blog .teaser {
@@ -133,6 +161,7 @@ html[dir="rtl"] {
 
     }
   }
+
 
 .main-content.vos-depute-es .dropdowns .dropdown-wrapper {
   float: right;
@@ -183,7 +212,7 @@ main.mp-profile .profile-select .details ul {
 main.mp-profile .title { float: right;
   p{
     left: auto;
-    right: 8px; 
+    right: 8px;
   }
  }
   // Footer
@@ -197,6 +226,52 @@ main.mp-profile .title { float: right;
     .copyright p {
       float: right;
       &.icons-footer { text-align: left; }
+    }
+  }
+}
+
+
+@include respond-to('mobile'){
+  html[dir='rtl']{
+
+    div.questions .comment .question-content .avatar {
+      &.desktop { display: none; }
+      &.mobile-only { position: relative; left: 0; float: right; clear: right; right: 0;
+        & + .author {
+          width: calc(100% - 85px);
+          float: right;
+          clear: left;
+          margin-right: 16px;
+          height: 69px;
+          margin-bottom: 10px;
+          & + p {
+            clear: both;
+            padding-top: 10px;
+          }
+          & + .videoWrapper {
+            clear: both;
+            margin-top: 10px;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+    div.questions .comment.response {
+      margin-right: 15px;
+
+    }
+    main.mp-profile .profile-select .profile-content h1{ margin-right: 0;}
+    .comment .meta .share ul {
+      right: -128px;
+      left: auto;
+    }
+
+    .main-content.vos-depute-es .dropdowns .dropdown-wrapper {
+      display: block;
+      float: right;
+      width: 100%;
+      margin-left: 0% !important;
+      margin-right: 0% !important;
     }
   }
 }

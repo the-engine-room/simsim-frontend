@@ -1340,7 +1340,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       jQuery(document).ready(function ($) {
         Theme.init();
       });
-    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_2a893677.js", "/");
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_c5e82401.js", "/");
   }, { "./modules/theme": 6, "buffer": 2, "e/U+97": 4 }], 6: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // ------------------------------------
@@ -1413,7 +1413,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             jQuery.each(includes, function () {
               var file = 'inc/' + $(this).data('include') + '.html';
               // if it is the header, let's attach the mobile menu
-              if ($(this).data('include') === 'header') {
+              if ($(this).data('include') === 'header' || $(this).data('include') === 'header-ar') {
                 $(this).load(file, function () {
 
                   $('.mobile-nav').click(function (e) {

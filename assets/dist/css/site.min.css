@@ -341,6 +341,12 @@ html[dir="rtl"] {
       font-family: "Droid Arabic Kufi", sans-serif; }
     html[dir="rtl"] nav.primary button {
       float: left; }
+  html[dir="rtl"] nav.secondary button.mobile-nav, html[dir="rtl"] .mobile-nav-wrapper button.mobile-nav-close {
+    float: right; }
+  html[dir="rtl"] nav.secondary .logo.mobile img {
+    margin-right: 30px; }
+  html[dir="rtl"] .mobile-nav-wrapper .submenu .search-box {
+    float: right; }
   html[dir="rtl"] nav.secondary .submenu {
     margin-right: 24%;
     margin-left: 1%;
@@ -377,10 +383,24 @@ html[dir="rtl"] {
     width: 35.5%;
     margin-right: 9.33333%;
     margin-left: 1%; }
+    @media (max-width: 736px) {
+      html[dir="rtl"] section.teasers .teaser {
+        margin-right: 1%;
+        width: 98%; } }
     html[dir="rtl"] section.teasers .teaser .avatar {
       position: absolute;
       top: 0;
       right: -100px; }
+      @media (max-width: 736px) {
+        html[dir="rtl"] section.teasers .teaser .avatar {
+          position: relative;
+          right: 0;
+          float: right; } }
+    @media (max-width: 736px) {
+      html[dir="rtl"] section.teasers .teaser p.title {
+        float: right;
+        margin-right: 17px;
+        font-size: 12px; } }
   html[dir="rtl"] section.teasers .blog .teaser {
     width: 31.33333%;
     margin-left: 1%;
@@ -445,6 +465,43 @@ html[dir="rtl"] {
     float: right; }
     html[dir="rtl"] footer.primary .copyright p.icons-footer {
       text-align: left; }
+
+@media (max-width: 736px) {
+  html[dir='rtl'] div.questions .comment .question-content .avatar.desktop {
+    display: none; }
+  html[dir='rtl'] div.questions .comment .question-content .avatar.mobile-only {
+    position: relative;
+    left: 0;
+    float: right;
+    clear: right;
+    right: 0; }
+    html[dir='rtl'] div.questions .comment .question-content .avatar.mobile-only + .author {
+      width: calc(100% - 85px);
+      float: right;
+      clear: left;
+      margin-right: 16px;
+      height: 69px;
+      margin-bottom: 10px; }
+      html[dir='rtl'] div.questions .comment .question-content .avatar.mobile-only + .author + p {
+        clear: both;
+        padding-top: 10px; }
+      html[dir='rtl'] div.questions .comment .question-content .avatar.mobile-only + .author + .videoWrapper {
+        clear: both;
+        margin-top: 10px;
+        padding-top: 10px; }
+  html[dir='rtl'] div.questions .comment.response {
+    margin-right: 15px; }
+  html[dir='rtl'] main.mp-profile .profile-select .profile-content h1 {
+    margin-right: 0; }
+  html[dir='rtl'] .comment .meta .share ul {
+    right: -128px;
+    left: auto; }
+  html[dir='rtl'] .main-content.vos-depute-es .dropdowns .dropdown-wrapper {
+    display: block;
+    float: right;
+    width: 100%;
+    margin-left: 0% !important;
+    margin-right: 0% !important; } }
 
 button,
 .button,
@@ -1183,6 +1240,11 @@ ul.dropdown-menu {
     text-align: center;
     box-shadow: 0 37px 61px 22px rgba(0, 0, 0, 0.12);
     border-radius: 4px; }
+    @media (max-width: 736px) {
+      .form-success .modal {
+        width: 75%;
+        margin-left: 12.5%;
+        left: 0; } }
     .form-success .modal p {
       margin: 14px 0;
       font-size: 1rem;
