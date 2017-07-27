@@ -21,14 +21,11 @@
         init: function() {
 
             this.includes();
-
             this.selectLists();
-
             this.textareaLimit();
             this.formSuccess();
-
             this.mobileMenu();
-
+            this.menuDropdown();
             this.mpAccordion();
 
         },
@@ -75,6 +72,7 @@
                 // if it is the header, let's attach the mobile menu
                 if($(this).data('include') === 'header'){
                   $(this).load(file, function(){
+
                     $('.mobile-nav').click( function(e) {
                       e.preventDefault();
                       $('.mobile-nav-wrapper').show();
@@ -83,6 +81,17 @@
                       e.preventDefault();
                       $('.mobile-nav-wrapper').hide();
                     });
+
+                    $('.has-sub').click( function(e){
+                        e.preventDefault();
+                        if($(this).next('.sub').is(':visible')){
+                          $(this).next('.sub').hide();
+                        }
+                        else {
+                          $(this).next('.sub').show();
+                        }
+                    });
+
                   });
                 }
                 else {
@@ -124,7 +133,17 @@
                 e.stopPropagation();
             });
         },
-
+        menuDropdown: function() {
+          $('.has-sub').click( function(e){
+              e.preventDefault();
+              if($(this).next('.sub').is(':visible')){
+                $(this).next('.sub').hide();
+              }
+              else {
+                $(this).next('.sub').show();
+              }
+          });
+        },
         mpAccordion: function() {
           var detailsListElements = $('.profile-content .details ul li a');
 

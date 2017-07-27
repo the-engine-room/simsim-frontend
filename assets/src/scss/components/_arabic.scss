@@ -1,0 +1,202 @@
+
+html[dir="rtl"] {
+  font-family: $arabic !important;
+  $headingFont: $arabic;
+  $paragraphFont: $arabic;
+
+
+  div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    @include arabic-font;
+
+    .fa {
+      font-family: 'FontAwesome';
+    }
+  }
+
+
+  .logo {
+    float: right;
+  }
+
+  nav.primary {
+    float: right;
+    ul li a {
+      font-family: $arabic;
+    }
+    button {
+      float: left;
+    }
+  }
+  nav.secondary {
+    .submenu {
+      margin-right: 24%;
+      margin-left: 1%;
+      width: 58%;
+    }
+    .icons, ul, .search-box    {
+      float: left;
+    }
+    .search-box {
+      display: inline-block;
+      float: right;
+    }
+    .icons i {
+        float: left;
+        &.fa-youtube-play {
+					margin-right: 5px;
+
+					&:after {
+						right: -5px;
+						background: $socialYoutube;
+					}
+				}
+
+				&.fa-facebook {
+					margin-right: 18px;
+
+					&:after {
+						right: -8px;
+						background: $socialFacebook;
+					}
+				}
+
+				&.fa-twitter {
+
+					&:after {
+						right: -6px;
+						background: $socialTwitter;
+					}
+				}
+
+    }
+    .language-choice {
+      float: right;
+      ul {
+        float: right;
+      }
+    }
+  }
+
+  section.introduction h1 { font-weight: 700; @include arabic-font; }
+
+  section.teasers .teaser {
+    float: right;
+    width: 35.5%;
+    margin-right: 9.33333%;
+    margin-left: 1%;
+
+    .avatar {
+      position: absolute;
+      top: 0;
+      right: -100px
+    }
+  }
+  section.teasers .blog .teaser {
+    width: 31.33333%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  div.questions .comment {
+    .meta {
+      clear: both;
+      > div {
+  			float: right;
+  			&.date {
+  				float: left;
+  			}
+  		}
+  	}
+    .question-content {
+      clear: both;
+      .avatar.desktop {
+        right: -100px;
+        left: 0;
+      }
+    }
+    &.response {
+      float: right;
+
+      margin-right: 11.66667%;
+      margin-left: 0;
+
+    }
+  }
+
+.main-content.vos-depute-es .dropdowns .dropdown-wrapper {
+  float: right;
+  &:nth-of-type(even){
+    margin-right: 6.66667%;
+    margin-left: 0;
+  }
+}
+.dropdowns .dropdown-wrapper .select .down-icon {
+  left: 26px;
+  right: auto;
+}
+.dropdowns .button-primary {
+  clear: right;
+}
+
+div.responses-list .response {
+  float: right;
+  .response-meta, .details {
+    float: right;
+  }
+}
+
+main.mp-profile header .response-meta {
+  float: right;
+  right: 0;
+  left: auto;
+  .score .score-number {
+    text-align: center;
+  }
+  .response-rate {
+    font-size: 10px;
+  }
+}
+main.mp-profile header .header-content > img {
+float: left; }
+main.mp-profile .profile-select .profile-content h1 {
+  float: right;
+  margin-left: 0%;
+  margin-right: 28%;
+}
+main.mp-profile .profile-select .details ul {
+  float: right;
+  border-right: none;
+  border-left: 1px solid rgba(152, 178, 183, 0.4);;
+
+}
+main.mp-profile .title { float: right;
+  p{
+    left: auto;
+    right: 8px; 
+  }
+ }
+  // Footer
+  footer.primary {
+    nav.footer, .associates {
+      float: right;
+      ul, div {
+        float: right;
+      }
+    }
+    .copyright p {
+      float: right;
+      &.icons-footer { text-align: left; }
+    }
+  }
+}

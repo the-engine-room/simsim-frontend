@@ -1340,7 +1340,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       jQuery(document).ready(function ($) {
         Theme.init();
       });
-    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_a2234734.js", "/");
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_2a893677.js", "/");
   }, { "./modules/theme": 6, "buffer": 2, "e/U+97": 4 }], 6: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // ------------------------------------
@@ -1366,14 +1366,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           init: function init() {
 
             this.includes();
-
             this.selectLists();
-
             this.textareaLimit();
             this.formSuccess();
-
             this.mobileMenu();
-
+            this.menuDropdown();
             this.mpAccordion();
           },
 
@@ -1418,6 +1415,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               // if it is the header, let's attach the mobile menu
               if ($(this).data('include') === 'header') {
                 $(this).load(file, function () {
+
                   $('.mobile-nav').click(function (e) {
                     e.preventDefault();
                     $('.mobile-nav-wrapper').show();
@@ -1425,6 +1423,15 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                   $('.mobile-nav-close').click(function (e) {
                     e.preventDefault();
                     $('.mobile-nav-wrapper').hide();
+                  });
+
+                  $('.has-sub').click(function (e) {
+                    e.preventDefault();
+                    if ($(this).next('.sub').is(':visible')) {
+                      $(this).next('.sub').hide();
+                    } else {
+                      $(this).next('.sub').show();
+                    }
                   });
                 });
               } else {
@@ -1466,7 +1473,16 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               e.stopPropagation();
             });
           },
-
+          menuDropdown: function menuDropdown() {
+            $('.has-sub').click(function (e) {
+              e.preventDefault();
+              if ($(this).next('.sub').is(':visible')) {
+                $(this).next('.sub').hide();
+              } else {
+                $(this).next('.sub').show();
+              }
+            });
+          },
           mpAccordion: function mpAccordion() {
             var detailsListElements = $('.profile-content .details ul li a');
 

@@ -1,6 +1,7 @@
 /*
   Based on the Eric Meyer CSS Reset v2.0 (http://meyerweb.com/eric/tools/css/reset/)
 */
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -301,6 +302,149 @@ main {
   @media (max-width: 736px) {
     .mobile-only {
       display: block !important; } }
+
+html[dir="rtl"] {
+  font-family: "Droid Arabic Kufi", sans-serif !important; }
+  html[dir="rtl"] div, html[dir="rtl"] span, html[dir="rtl"] applet, html[dir="rtl"] object, html[dir="rtl"] iframe,
+  html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4, html[dir="rtl"] h5, html[dir="rtl"] h6, html[dir="rtl"] p, html[dir="rtl"] blockquote, html[dir="rtl"] pre,
+  html[dir="rtl"] a, html[dir="rtl"] abbr, html[dir="rtl"] acronym, html[dir="rtl"] address, html[dir="rtl"] big, html[dir="rtl"] cite, html[dir="rtl"] code,
+  html[dir="rtl"] del, html[dir="rtl"] dfn, html[dir="rtl"] em, html[dir="rtl"] img, html[dir="rtl"] ins, html[dir="rtl"] kbd, html[dir="rtl"] q, html[dir="rtl"] s, html[dir="rtl"] samp,
+  html[dir="rtl"] small, html[dir="rtl"] strike, html[dir="rtl"] strong, html[dir="rtl"] sub, html[dir="rtl"] sup, html[dir="rtl"] tt, html[dir="rtl"] var,
+  html[dir="rtl"] b, html[dir="rtl"] u, html[dir="rtl"] i, html[dir="rtl"] center,
+  html[dir="rtl"] dl, html[dir="rtl"] dt, html[dir="rtl"] dd, html[dir="rtl"] ol, html[dir="rtl"] ul, html[dir="rtl"] li,
+  html[dir="rtl"] fieldset, html[dir="rtl"] form, html[dir="rtl"] label, html[dir="rtl"] legend,
+  html[dir="rtl"] table, html[dir="rtl"] caption, html[dir="rtl"] tbody, html[dir="rtl"] tfoot, html[dir="rtl"] thead, html[dir="rtl"] tr, html[dir="rtl"] th, html[dir="rtl"] td,
+  html[dir="rtl"] article, html[dir="rtl"] aside, html[dir="rtl"] canvas, html[dir="rtl"] details, html[dir="rtl"] embed,
+  html[dir="rtl"] figure, html[dir="rtl"] figcaption, html[dir="rtl"] footer, html[dir="rtl"] header, html[dir="rtl"] hgroup,
+  html[dir="rtl"] menu, html[dir="rtl"] nav, html[dir="rtl"] output, html[dir="rtl"] ruby, html[dir="rtl"] section, html[dir="rtl"] summary,
+  html[dir="rtl"] time, html[dir="rtl"] mark, html[dir="rtl"] audio, html[dir="rtl"] video {
+    font-family: "Droid Arabic Kufi", sans-serif; }
+    html[dir="rtl"] div .fa, html[dir="rtl"] span .fa, html[dir="rtl"] applet .fa, html[dir="rtl"] object .fa, html[dir="rtl"] iframe .fa,
+    html[dir="rtl"] h1 .fa, html[dir="rtl"] h2 .fa, html[dir="rtl"] h3 .fa, html[dir="rtl"] h4 .fa, html[dir="rtl"] h5 .fa, html[dir="rtl"] h6 .fa, html[dir="rtl"] p .fa, html[dir="rtl"] blockquote .fa, html[dir="rtl"] pre .fa,
+    html[dir="rtl"] a .fa, html[dir="rtl"] abbr .fa, html[dir="rtl"] acronym .fa, html[dir="rtl"] address .fa, html[dir="rtl"] big .fa, html[dir="rtl"] cite .fa, html[dir="rtl"] code .fa,
+    html[dir="rtl"] del .fa, html[dir="rtl"] dfn .fa, html[dir="rtl"] em .fa, html[dir="rtl"] img .fa, html[dir="rtl"] ins .fa, html[dir="rtl"] kbd .fa, html[dir="rtl"] q .fa, html[dir="rtl"] s .fa, html[dir="rtl"] samp .fa,
+    html[dir="rtl"] small .fa, html[dir="rtl"] strike .fa, html[dir="rtl"] strong .fa, html[dir="rtl"] sub .fa, html[dir="rtl"] sup .fa, html[dir="rtl"] tt .fa, html[dir="rtl"] var .fa,
+    html[dir="rtl"] b .fa, html[dir="rtl"] u .fa, html[dir="rtl"] i .fa, html[dir="rtl"] center .fa,
+    html[dir="rtl"] dl .fa, html[dir="rtl"] dt .fa, html[dir="rtl"] dd .fa, html[dir="rtl"] ol .fa, html[dir="rtl"] ul .fa, html[dir="rtl"] li .fa,
+    html[dir="rtl"] fieldset .fa, html[dir="rtl"] form .fa, html[dir="rtl"] label .fa, html[dir="rtl"] legend .fa,
+    html[dir="rtl"] table .fa, html[dir="rtl"] caption .fa, html[dir="rtl"] tbody .fa, html[dir="rtl"] tfoot .fa, html[dir="rtl"] thead .fa, html[dir="rtl"] tr .fa, html[dir="rtl"] th .fa, html[dir="rtl"] td .fa,
+    html[dir="rtl"] article .fa, html[dir="rtl"] aside .fa, html[dir="rtl"] canvas .fa, html[dir="rtl"] details .fa, html[dir="rtl"] embed .fa,
+    html[dir="rtl"] figure .fa, html[dir="rtl"] figcaption .fa, html[dir="rtl"] footer .fa, html[dir="rtl"] header .fa, html[dir="rtl"] hgroup .fa,
+    html[dir="rtl"] menu .fa, html[dir="rtl"] nav .fa, html[dir="rtl"] output .fa, html[dir="rtl"] ruby .fa, html[dir="rtl"] section .fa, html[dir="rtl"] summary .fa,
+    html[dir="rtl"] time .fa, html[dir="rtl"] mark .fa, html[dir="rtl"] audio .fa, html[dir="rtl"] video .fa {
+      font-family: 'FontAwesome'; }
+  html[dir="rtl"] .logo {
+    float: right; }
+  html[dir="rtl"] nav.primary {
+    float: right; }
+    html[dir="rtl"] nav.primary ul li a {
+      font-family: "Droid Arabic Kufi", sans-serif; }
+    html[dir="rtl"] nav.primary button {
+      float: left; }
+  html[dir="rtl"] nav.secondary .submenu {
+    margin-right: 24%;
+    margin-left: 1%;
+    width: 58%; }
+  html[dir="rtl"] nav.secondary .icons, html[dir="rtl"] nav.secondary ul, html[dir="rtl"] nav.secondary .search-box {
+    float: left; }
+  html[dir="rtl"] nav.secondary .search-box {
+    display: inline-block;
+    float: right; }
+  html[dir="rtl"] nav.secondary .icons i {
+    float: left; }
+    html[dir="rtl"] nav.secondary .icons i.fa-youtube-play {
+      margin-right: 5px; }
+      html[dir="rtl"] nav.secondary .icons i.fa-youtube-play:after {
+        right: -5px;
+        background: #EA2603; }
+    html[dir="rtl"] nav.secondary .icons i.fa-facebook {
+      margin-right: 18px; }
+      html[dir="rtl"] nav.secondary .icons i.fa-facebook:after {
+        right: -8px;
+        background: #3B5998; }
+    html[dir="rtl"] nav.secondary .icons i.fa-twitter:after {
+      right: -6px;
+      background: #3394FF; }
+  html[dir="rtl"] nav.secondary .language-choice {
+    float: right; }
+    html[dir="rtl"] nav.secondary .language-choice ul {
+      float: right; }
+  html[dir="rtl"] section.introduction h1 {
+    font-weight: 700;
+    font-family: "Droid Arabic Kufi", sans-serif; }
+  html[dir="rtl"] section.teasers .teaser {
+    float: right;
+    width: 35.5%;
+    margin-right: 9.33333%;
+    margin-left: 1%; }
+    html[dir="rtl"] section.teasers .teaser .avatar {
+      position: absolute;
+      top: 0;
+      right: -100px; }
+  html[dir="rtl"] section.teasers .blog .teaser {
+    width: 31.33333%;
+    margin-left: 1%;
+    margin-right: 1%; }
+  html[dir="rtl"] div.questions .comment .meta {
+    clear: both; }
+    html[dir="rtl"] div.questions .comment .meta > div {
+      float: right; }
+      html[dir="rtl"] div.questions .comment .meta > div.date {
+        float: left; }
+  html[dir="rtl"] div.questions .comment .question-content {
+    clear: both; }
+    html[dir="rtl"] div.questions .comment .question-content .avatar.desktop {
+      right: -100px;
+      left: 0; }
+  html[dir="rtl"] div.questions .comment.response {
+    float: right;
+    margin-right: 11.66667%;
+    margin-left: 0; }
+  html[dir="rtl"] .main-content.vos-depute-es .dropdowns .dropdown-wrapper {
+    float: right; }
+    html[dir="rtl"] .main-content.vos-depute-es .dropdowns .dropdown-wrapper:nth-of-type(even) {
+      margin-right: 6.66667%;
+      margin-left: 0; }
+  html[dir="rtl"] .dropdowns .dropdown-wrapper .select .down-icon {
+    left: 26px;
+    right: auto; }
+  html[dir="rtl"] .dropdowns .button-primary {
+    clear: right; }
+  html[dir="rtl"] div.responses-list .response {
+    float: right; }
+    html[dir="rtl"] div.responses-list .response .response-meta, html[dir="rtl"] div.responses-list .response .details {
+      float: right; }
+  html[dir="rtl"] main.mp-profile header .response-meta {
+    float: right;
+    right: 0;
+    left: auto; }
+    html[dir="rtl"] main.mp-profile header .response-meta .score .score-number {
+      text-align: center; }
+    html[dir="rtl"] main.mp-profile header .response-meta .response-rate {
+      font-size: 10px; }
+  html[dir="rtl"] main.mp-profile header .header-content > img {
+    float: left; }
+  html[dir="rtl"] main.mp-profile .profile-select .profile-content h1 {
+    float: right;
+    margin-left: 0%;
+    margin-right: 28%; }
+  html[dir="rtl"] main.mp-profile .profile-select .details ul {
+    float: right;
+    border-right: none;
+    border-left: 1px solid rgba(152, 178, 183, 0.4); }
+  html[dir="rtl"] main.mp-profile .title {
+    float: right; }
+    html[dir="rtl"] main.mp-profile .title p {
+      left: auto;
+      right: 8px; }
+  html[dir="rtl"] footer.primary nav.footer, html[dir="rtl"] footer.primary .associates {
+    float: right; }
+    html[dir="rtl"] footer.primary nav.footer ul, html[dir="rtl"] footer.primary nav.footer div, html[dir="rtl"] footer.primary .associates ul, html[dir="rtl"] footer.primary .associates div {
+      float: right; }
+  html[dir="rtl"] footer.primary .copyright p {
+    float: right; }
+    html[dir="rtl"] footer.primary .copyright p.icons-footer {
+      text-align: left; }
 
 button,
 .button,
@@ -1932,7 +2076,7 @@ nav.secondary {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: white;
     z-index: 999; }
     .mobile-nav-wrapper .icons {
@@ -2032,6 +2176,17 @@ nav.secondary {
         padding-bottom: 15px; }
         .mobile-nav-wrapper > ul li a {
           color: #98B2B7; }
+          .mobile-nav-wrapper > ul li a.has-sub > .fa {
+            float: right; }
+          .mobile-nav-wrapper > ul li a.has-sub + ul.sub {
+            display: none;
+            padding: 0px;
+            background: #F4F4F4;
+            margin: 10px -15px;
+            width: calc(100% +15px); }
+            .mobile-nav-wrapper > ul li a.has-sub + ul.sub li {
+              padding: 15px 15px;
+              font-size: 10.0px; }
       .mobile-nav-wrapper > ul + button.secondary {
         width: 100%;
         padding: 15px; }

@@ -1,6 +1,9 @@
 //
 // Typography
 // --------------------------------------------------
+@mixin arabic-font {
+	font-family: $arabic; 
+}
 @mixin heading-font {
 	font-family: $headingFont;
 }

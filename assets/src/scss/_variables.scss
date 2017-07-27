@@ -4,9 +4,10 @@
 
 // Fonts
 // -------------------
-
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 $headingFont: 'Montserrat', sans-serif;
 $paragraphFont: 'Lato', sans-serif;
+$arabic: 'Droid Arabic Kufi', sans-serif;
 
 // Colours
 // -------------------
@@ -39,7 +40,7 @@ $breakpoints: (
 	'desktop': (min-width: 1200px),
 );
 
-// Include gutter on outside 
+// Include gutter on outside
 $gutterOnOutside: true;
 
 // Breakpoints Grid Settings

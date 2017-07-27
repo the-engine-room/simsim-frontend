@@ -478,7 +478,7 @@ nav.secondary {
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100%;
+		height: auto;
 		background-color: white;
 		z-index: 999;
 		.icons {
@@ -576,7 +576,25 @@ nav.secondary {
 			li {
 				list-style: none;
 				padding-bottom: 15px;
-				a { color: $navColor; }
+				a { color: $navColor;
+					&.has-sub {
+						& > .fa {
+							float: right;
+						}
+						& + ul.sub{
+							display: none;
+							padding: 0px;
+							background: $inputColor;
+							margin: 10px -15px;
+							width: calc(100% +15px);
+							li {
+								padding: 15px 15px;
+								font-size: 10.0px;
+							}
+						}
+					}
+
+				}
 			}
 			& + button.secondary {
 				width: 100%;
