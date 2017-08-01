@@ -12,6 +12,14 @@ To download all needed depencies and packages
 
 In assets/gulpfile.js, change the proxy variable to your local url.
 
+Headers and footers are loaded asynchronously. They can be found in the 
+
+`/inc` 
+
+directory. 
+
+Once these are correctly imported, line 23 of /assets/src/js/modules/theme.js can be commented out and the distribution files rebuilt. 
+
 ## Gulp Tasks
 
 There are two different tasks configured. 
