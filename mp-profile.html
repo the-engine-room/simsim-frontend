@@ -20,8 +20,9 @@
         <main class="mp-profile">
             <header>
                 <div class="container">
+                    <img src="assets/dist/img/banner-mp.png" class="party-banner">
                     <div class="header-content">
-                        <img src="assets/dist/img/movement.populaire.png">
+
                         <div class="response-meta">
                             <img src="assets/dist/img/mp-profile.png">
                             <h5 class="mobile-hidden">TAUX DE RÉPONSE</h5>
@@ -72,7 +73,7 @@
 
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="tags-wrapper">
                             <div class="title">
@@ -98,9 +99,16 @@
 
             <div class="container">
                 <div class="main-content vos-questions">
-                    <h1><a href="#">Vos Questions</a> / Publications</h1>
+                    <h1><a href="#tab-1" class="tab-nav active">Vos Questions</a> / <a href="#tab-2" class="tab-nav">Publications</a></h1>
                     <div class="questions-wrapper">
-                        <div class="questions" data-include="questions"></div>
+                      <div class="tabs">
+                        <div id="tab-1" class="tab active">
+                          <div class="questions" data-include="questions"></div>
+                        </div>
+                        <div id="tab-2" class="tab">
+                          <div class="questions" data-include="questions"></div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
