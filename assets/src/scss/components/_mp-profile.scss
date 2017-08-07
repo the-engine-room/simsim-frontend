@@ -11,6 +11,12 @@ main.mp-profile {
 		border-bottom: 7px solid #FFBE2A;
 		height: 268px;
 
+		.party-banner {
+			position: absolute;
+			left: auto;
+			height: 268px;
+		}
+
 		.header-content {
 			@include columns(10.4,0.6);
 
@@ -160,7 +166,7 @@ main.mp-profile {
 				line-height: 1.7;
 				@include respond-to('mobile'){
 					text-transform: none;
-					font-size: 14px; 
+					font-size: 14px;
 				}
 			}
 		}
@@ -240,3 +246,11 @@ main.mp-profile {
 		}
 	}
 }
+
+main.mp-profile .vos-questions h1 .tab-nav {
+	color: $navColor;
+	&.active {
+		color: $primaryColor;
+	}
+}
+.tabs .tab { display: none; &.active { display: block; }}

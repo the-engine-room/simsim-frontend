@@ -22,6 +22,7 @@
 
             this.includes();
             this.selectLists();
+            this.mpTabs();
             this.textareaLimit();
             this.formSuccess();
             this.mobileMenu();
@@ -41,6 +42,15 @@
               $('.mobile-nav-wrapper').hide();
             });
 
+        },
+
+        mpTabs: function() {
+          $('.tab-nav').click(function(e){
+            e.preventDefault();
+            $('.tab-nav, .tab').removeClass('active');
+            $(this).addClass('active');
+            $($(this).attr('href')).addClass('active');
+          });
         },
 
         selectLists: function() {
