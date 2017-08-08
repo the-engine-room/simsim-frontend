@@ -65,7 +65,7 @@ nav.secondary {
 
 	position: relative;
 	z-index: 60;
-	padding: 30px 0 2px;
+	padding: 30px 0 30px;
 
 	.language-choice {
 		@include columns(2,0,0);
