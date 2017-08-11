@@ -2686,14 +2686,14 @@ main.mp-profile .vos-questions {
       font-weight: 700; }
 
 main.mp-profile .vos-questions h1 .tab-nav {
-  color: #98B2B7; }
-  main.mp-profile .vos-questions h1 .tab-nav.active {
-    color: #E86D15; }
+  color: #E86D15; }
+  main.mp-profile .vos-questions h1 .tab-nav.inactive {
+    color: #98B2B7; }
 
 .tabs .tab {
-  display: none; }
-  .tabs .tab.active {
-    display: block; }
+  display: block; }
+  .tabs .tab.inactive {
+    display: none; }
 
 div.pagination {
   float: left;

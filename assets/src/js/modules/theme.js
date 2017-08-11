@@ -32,24 +32,22 @@
         },
 
         mobileMenu: function() {
-
-            $('.mobile-nav').click( function(e) {
-              e.preventDefault();
-              $('.mobile-nav-wrapper').css('display', 'block');
-            });
-            $('.mobile-nav-close').click(function(e){
-              e.preventDefault();
-              $('.mobile-nav-wrapper').hide();
-            });
-
+          $('.mobile-nav').click( function(e) {
+            e.preventDefault();
+            $('.mobile-nav-wrapper').css('display', 'block');
+          });
+          $('.mobile-nav-close').click(function(e){
+            e.preventDefault();
+            $('.mobile-nav-wrapper').hide();
+          });
         },
 
         mpTabs: function() {
           $('.tab-nav').click(function(e){
             e.preventDefault();
-            $('.tab-nav, .tab').removeClass('active');
-            $(this).addClass('active');
-            $($(this).attr('href')).addClass('active');
+            $('.tab-nav, .tab').addClass('inactive');
+            $(this).removeClass('inactive');
+            $($(this).attr('href')).removeClass('inactive');
           });
         },
 

@@ -248,9 +248,9 @@ main.mp-profile {
 }
 
 main.mp-profile .vos-questions h1 .tab-nav {
-	color: $navColor;
-	&.active {
-		color: $primaryColor;
+	color:  $primaryColor;
+	&.inactive {
+		color:$navColor;
 	}
 }
-.tabs .tab { display: none; &.active { display: block; }}
+.tabs .tab { display: block; &.inactive { display: none; }}
