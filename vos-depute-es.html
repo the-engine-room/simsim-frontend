@@ -21,10 +21,17 @@
             <div class="container">
                 <div class="main-content vos-depute-es">
                     <h1>Vos Député-es</h1>
-                    <form class="dropdowns">
+                    <form class="dropdowns" method="get">
                         <div class="dropdown-wrapper">
                             <label>NOM DU/DE LA DÉPUTÉ</label>
-                            <div class="dropdown">
+
+                            <select id="" name="depute" class="wide">
+                              <option></option>
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                              <option>Option 3</option>
+                            </select>
+                            <!-- <div class="dropdown">
                                 <div class="select">
                                     <span class="select-content"></span>
                                     <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
@@ -36,11 +43,18 @@
                                     <li><a href="#">Example 3</a></li>
                                     <li><a href="#">Example 4</a></li>
                                 </ul>
-                            </div>
-                        </div>  
+                            </div> -->
+                        </div>
 
                         <div class="dropdown-wrapper">
                             <label>PARTI POLITIQUE</label>
+                            <select id="" name="parti-politique" class="wide">
+                              <option></option>
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                              <option>Option 3</option>
+                            </select>
+                            <!--
                             <div class="dropdown">
                                 <div class="select">
                                     <span class="select-content"></span>
@@ -54,11 +68,19 @@
                                     <li><a href="#">Example 4</a></li>
                                 </ul>
                             </div>
-                        </div> 
+                            -->
+                        </div>
 
                         <div class="dropdown-wrapper">
                             <label>PREFECTURE OU PROVINCE</label>
-                            <div class="dropdown">
+
+                            <select id="" name="province" class="wide">
+                              <option></option>
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                              <option>Option 3</option>
+                            </select>
+                            <!-- <div class="dropdown">
                                 <div class="select">
                                     <span class="select-content"></span>
                                     <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
@@ -70,12 +92,19 @@
                                     <li><a href="#">Example 3</a></li>
                                     <li><a href="#">Example 4</a></li>
                                 </ul>
-                            </div>
-                        </div> 
+                            </div> -->
+                        </div>
 
                         <div class="dropdown-wrapper">
                             <label>CIRCONSCRIPTION</label>
-                            <div class="dropdown">
+                            <select id="" name="circoscription" class="wide">
+                              <option></option>
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                              <option>Option 3</option>
+                            </select>
+
+                            <!-- <div class="dropdown">
                                 <div class="select">
                                     <span class="select-content"></span>
                                     <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
@@ -88,11 +117,19 @@
                                     <li><a href="#">Example 4</a></li>
                                 </ul>
                             </div>
-                        </div> 
+                          -->
+                        </div>
 
                         <div class="dropdown-wrapper">
                             <label>COMMISSION</label>
-                            <div class="dropdown">
+                            <select id="" name="commission" class="wide">
+                              <option></option>
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                              <option>Option 3</option>
+                            </select>
+
+                            <!--<div class="dropdown">
                                 <div class="select">
                                     <span class="select-content"></span>
                                     <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
@@ -104,8 +141,8 @@
                                     <li><a href="#">Example 3</a></li>
                                     <li><a href="#">Example 4</a></li>
                                 </ul>
-                            </div>
-                        </div> 
+                            </div> -->
+                        </div>
 
                         <input class="button-primary" type="submit" value="Rechercher">
                     </form>
@@ -124,7 +161,7 @@
                     <div class="response" data-include="response"></div>
                     <div class="response" data-include="response-inactive"></div>
                     <div class="response" data-include="response-inactive"></div>
-                </div>    
+                </div>
                 <div class="pagination">
                     <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
                     <a href="#">RÉCENTES</a>
@@ -138,7 +175,7 @@
                     <a href="#">SUIVANT</a>
                     <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
 
-                </div>            
+                </div>
             </div>
         </section>
         <div data-include="footer"></div>
@@ -146,7 +183,7 @@
             WebFontConfig = {
                 google: {
                     families: ['Lato:400,700', 'Montserrat:400,700']
-                }           
+                }
             };
 
             (function(d) {
@@ -157,6 +194,7 @@
             })(document);
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/dist/js/jquery.nice-select.min.js"></script>
         <script src="assets/dist/js/site.js?v=1"></script>
         <script src="https://use.fontawesome.com/6f07f7ab39.js"></script>
     </body>

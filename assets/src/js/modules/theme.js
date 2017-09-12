@@ -29,6 +29,8 @@
             this.menuDropdown();
             this.mpAccordion();
 
+
+
         },
 
         mobileMenu: function() {
@@ -52,7 +54,7 @@
         },
 
         selectLists: function() {
-            $('.dropdown-wrapper').each(function(){
+            /* $('.dropdown-wrapper').each(function(){
                 var parent = $(this);
                 var select = $(this).find('.select-content');
                 // onClick new options list of new select
@@ -70,7 +72,9 @@
                     $(parent).toggleClass('active');
                     $(this).find('.dropdown-menu').toggleClass('hide');
                 });
-            });
+            }); */
+
+            $('select').niceSelect();
         },
 
         includes: function() {

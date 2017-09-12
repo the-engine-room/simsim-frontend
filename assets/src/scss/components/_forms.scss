@@ -185,7 +185,7 @@ meter {
 
     .dropdown-wrapper{
         padding: 0 0 28px;
-        position: relative;
+        // position: relative;
         z-index: 10;
 
         &.active {
@@ -309,7 +309,7 @@ ul.dropdown-menu{
         @include respond-to('mobile'){
           width: 75%;
           margin-left: 12.5%;
-          left: 0; 
+          left: 0;
         }
         p {
             margin: 14px 0;
