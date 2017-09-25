@@ -52,7 +52,14 @@
         mpTabs: function() {
           $('.tab-nav').click(function(e){
             e.preventDefault();
-            $('.tab-nav, .tab').addClass('inactive');
+            var targetWrapper = $(this).data('ref');
+            $(this).siblings().addClass('inactive');
+            $(targetWrapper).children('.tab').addClass('inactive');
+
+
+            //$('.tab-nav, .tab').addClass('inactive');
+
+
             $(this).removeClass('inactive');
             $($(this).attr('href')).removeClass('inactive');
           });
@@ -110,18 +117,14 @@
                     });
 
 
-                    $('.tab-nav').click(function(e){
-                      e.preventDefault();
-                      $('.tab-nav, .tab').addClass('inactive');
-                      $(this).removeClass('inactive');
-                      $($(this).attr('href')).removeClass('inactive');
-                    });
 
 
                   });
                 }
                 else {
                   $(this).load(file);
+                
+
                 }
             });
 
