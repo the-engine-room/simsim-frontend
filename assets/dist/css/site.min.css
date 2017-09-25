@@ -2281,13 +2281,17 @@ main.mp-profile {
   padding-top: 0;
   margin-top: 0; }
   main.mp-profile header {
-    background-color: #0099BC;
+    /*background-color: #0099BC; */
     border-bottom: 7px solid #FFBE2A;
-    height: 268px; }
-    main.mp-profile header .party-banner {
-      position: absolute;
-      left: auto;
-      height: 268px; }
+    height: 268px;
+    background-size: cover;
+    /*
+		.party-banner {
+			position: absolute;
+			left: auto;
+			height: 268px;
+		}
+*/ }
     main.mp-profile header .header-content {
       display: block;
       float: left;
@@ -2684,10 +2688,10 @@ main.mp-profile .vos-questions {
       color: #E86D15;
       font-weight: 700; }
 
-main.mp-profile .vos-questions h1 .tab-nav {
-  color: #E86D15; }
-  main.mp-profile .vos-questions h1 .tab-nav.inactive {
-    color: #98B2B7; }
+main.mp-profile .vos-questions h1 .tab-nav, .tab-nav {
+  color: #E86D15 !important; }
+  main.mp-profile .vos-questions h1 .tab-nav.inactive, .tab-nav.inactive {
+    color: #98B2B7 !important; }
 
 .tabs .tab {
   display: block; }

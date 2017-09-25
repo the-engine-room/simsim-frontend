@@ -7,16 +7,18 @@ main.mp-profile {
 	margin-top: 0;
 
 	header {
-		background-color: #0099BC;
+		/*background-color: #0099BC; */
 		border-bottom: 7px solid #FFBE2A;
 		height: 268px;
+		background-size: cover;
 
+/*
 		.party-banner {
 			position: absolute;
 			left: auto;
 			height: 268px;
 		}
-
+*/
 		.header-content {
 			@include columns(10.4,0.6);
 
@@ -247,10 +249,10 @@ main.mp-profile {
 	}
 }
 
-main.mp-profile .vos-questions h1 .tab-nav {
-	color:  $primaryColor;
+main.mp-profile .vos-questions h1 .tab-nav, .tab-nav {
+	color:  $primaryColor !important;
 	&.inactive {
-		color:$navColor;
+		color:$navColor !important;
 	}
 }
 .tabs .tab { display: block; &.inactive { display: none; }}

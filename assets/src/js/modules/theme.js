@@ -22,6 +22,7 @@
 
             this.includes();
             this.selectLists();
+            this.partyBanner();
             this.mpTabs();
             this.textareaLimit();
             this.formSuccess();
@@ -42,6 +43,10 @@
             e.preventDefault();
             $('.mobile-nav-wrapper').hide();
           });
+        },
+
+        partyBanner: function() {
+          $('#party-banner').css('background-image', 'url(' + $('#party-banner').data('header') + ')');
         },
 
         mpTabs: function() {
@@ -103,6 +108,15 @@
                           $(this).next('.sub').show();
                         }
                     });
+
+
+                    $('.tab-nav').click(function(e){
+                      e.preventDefault();
+                      $('.tab-nav, .tab').addClass('inactive');
+                      $(this).removeClass('inactive');
+                      $($(this).attr('href')).removeClass('inactive');
+                    });
+
 
                   });
                 }

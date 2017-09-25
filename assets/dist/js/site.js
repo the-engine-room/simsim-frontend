@@ -1340,7 +1340,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       jQuery(document).ready(function ($) {
         Theme.init();
       });
-    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_e809c796.js", "/");
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_7ff4c3f7.js", "/");
   }, { "./modules/theme": 6, "buffer": 2, "e/U+97": 4 }], 6: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // ------------------------------------
@@ -1367,6 +1367,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             this.includes();
             this.selectLists();
+            this.partyBanner();
             this.mpTabs();
             this.textareaLimit();
             this.formSuccess();
@@ -1384,6 +1385,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
               e.preventDefault();
               $('.mobile-nav-wrapper').hide();
             });
+          },
+
+          partyBanner: function partyBanner() {
+            $('#party-banner').css('background-image', 'url(' + $('#party-banner').data('header') + ')');
           },
 
           mpTabs: function mpTabs() {
@@ -1443,6 +1448,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                     } else {
                       $(this).next('.sub').show();
                     }
+                  });
+
+                  $('.tab-nav').click(function (e) {
+                    e.preventDefault();
+                    $('.tab-nav, .tab').addClass('inactive');
+                    $(this).removeClass('inactive');
+                    $($(this).attr('href')).removeClass('inactive');
                   });
                 });
               } else {
