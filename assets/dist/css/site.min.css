@@ -1018,8 +1018,7 @@ input[type="file"] {
   line-height: 100%; }
 
 textarea, .textarea {
-  height: auto;
-  min-height: 200px; }
+  height: auto; }
 
 .textarea-wrapper {
   position: relative; }
@@ -3665,5 +3664,3 @@ article.grid-examples {
     @media (max-width: 736px) {
       article.grid-examples .box.-tall code {
         font-size: 0.8rem; } }
-
-/*# sourceMappingURL=site.min.css.map */
