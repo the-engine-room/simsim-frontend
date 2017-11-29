@@ -304,7 +304,8 @@ main {
       display: block !important; } }
 
 html[dir="rtl"] {
-  font-family: "Droid Arabic Kufi", sans-serif !important; }
+  font-family: "Droid Arabic Kufi", sans-serif !important;
+  letter-spacing: normal !important; }
   html[dir="rtl"] div, html[dir="rtl"] span, html[dir="rtl"] applet, html[dir="rtl"] object, html[dir="rtl"] iframe,
   html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4, html[dir="rtl"] h5, html[dir="rtl"] h6, html[dir="rtl"] p, html[dir="rtl"] blockquote, html[dir="rtl"] pre,
   html[dir="rtl"] a, html[dir="rtl"] abbr, html[dir="rtl"] acronym, html[dir="rtl"] address, html[dir="rtl"] big, html[dir="rtl"] cite, html[dir="rtl"] code,
@@ -338,9 +339,11 @@ html[dir="rtl"] {
   html[dir="rtl"] nav.primary {
     float: right; }
     html[dir="rtl"] nav.primary ul li a {
-      font-family: "Droid Arabic Kufi", sans-serif; }
+      font-family: "Droid Arabic Kufi", sans-serif;
+      letter-spacing: 0px !important; }
     html[dir="rtl"] nav.primary button {
-      float: left; }
+      float: left;
+      letter-spacing: 0px !important; }
   html[dir="rtl"] nav.secondary button.mobile-nav, html[dir="rtl"] .mobile-nav-wrapper button.mobile-nav-close {
     float: right; }
   html[dir="rtl"] nav.secondary .logo.mobile img {
@@ -350,7 +353,8 @@ html[dir="rtl"] {
   html[dir="rtl"] nav.secondary .submenu {
     margin-right: 24%;
     margin-left: 1%;
-    width: 58%; }
+    width: 58%;
+    letter-spacing: 0px !important; }
   html[dir="rtl"] nav.secondary .icons, html[dir="rtl"] nav.secondary ul, html[dir="rtl"] nav.secondary .search-box {
     float: left; }
   html[dir="rtl"] nav.secondary .search-box {
@@ -461,6 +465,8 @@ html[dir="rtl"] {
     float: right; }
     html[dir="rtl"] footer.primary nav.footer ul, html[dir="rtl"] footer.primary nav.footer div, html[dir="rtl"] footer.primary .associates ul, html[dir="rtl"] footer.primary .associates div {
       float: right; }
+    html[dir="rtl"] footer.primary nav.footer ul li a, html[dir="rtl"] footer.primary .associates ul li a {
+      letter-spacing: 0px !important; }
   html[dir="rtl"] footer.primary .copyright p {
     float: right; }
     html[dir="rtl"] footer.primary .copyright p.icons-footer {
@@ -502,6 +508,9 @@ html[dir="rtl"] {
     width: 100%;
     margin-left: 0% !important;
     margin-right: 0% !important; } }
+
+div.questions .comment .question-content .textarea .author a, label, nav.secondary .submenu ul li a, div.responses-list .response .details .name {
+  letter-spacing: normal !important; }
 
 button,
 .button,
@@ -3664,3 +3673,5 @@ article.grid-examples {
     @media (max-width: 736px) {
       article.grid-examples .box.-tall code {
         font-size: 0.8rem; } }
+
+/*# sourceMappingURL=site.min.css.map */

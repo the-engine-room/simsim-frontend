@@ -4,6 +4,7 @@ html[dir="rtl"] {
   $headingFont: $arabic;
   $paragraphFont: $arabic;
 
+  letter-spacing: normal !important;
 
   div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -34,9 +35,11 @@ html[dir="rtl"] {
     float: right;
     ul li a {
       font-family: $arabic;
+      letter-spacing: 0px !important;
     }
     button {
       float: left;
+      letter-spacing: 0px !important;
     }
   }
   nav.secondary button.mobile-nav, .mobile-nav-wrapper button.mobile-nav-close {
@@ -56,6 +59,7 @@ html[dir="rtl"] {
       margin-right: 24%;
       margin-left: 1%;
       width: 58%;
+      letter-spacing: 0px !important;
     }
     .icons, ul, .search-box    {
       float: left;
@@ -222,6 +226,9 @@ main.mp-profile .title { float: right;
       ul, div {
         float: right;
       }
+      ul li a {
+        letter-spacing: 0px !important;
+      }
     }
     .copyright p {
       float: right;
@@ -275,3 +282,6 @@ main.mp-profile .title { float: right;
     }
   }
 }
+
+div.questions .comment .question-content .textarea .author a, label, nav.secondary .submenu ul li a, div.responses-list .response .details .name
+{ letter-spacing: normal !important; }
