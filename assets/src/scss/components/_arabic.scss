@@ -26,6 +26,12 @@ html[dir="rtl"] {
     }
   }
 
+  nav.secondary .language-choice ul li img {
+    float: left;
+  }
+  nav.secondary .language-choice ul li a {
+    padding-right: 10px;
+  }
 
   .logo {
     float: right;
@@ -107,7 +113,30 @@ html[dir="rtl"] {
 
   section.introduction h1 { font-weight: 700; @include arabic-font; }
 
+  section.teasers .nouvelles-reponses > h2, section.teasers .publications > h2 {
+      position: relative;
+      span {
+        background-color: $inputColor;
+        padding-left: 24px;
+        z-index: 10;
+        position: relative;
+      }
+      &:after {
+        content: ' ';
+        display: block;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: 50%;
+        border-bottom: 1px solid $navColor;
+      }
+  }
+
   section.teasers .teaser {
+
+
+
     float: right;
     width: 35.5%;
     margin-right: 9.33333%;
@@ -115,6 +144,10 @@ html[dir="rtl"] {
     @include respond-to('mobile'){
       margin-right: 1%;
       width: 98%;
+    }
+
+    p.readmore a {
+      float: left;
     }
 
     .avatar {
@@ -237,15 +270,30 @@ main.mp-profile .title { float: right;
   }
 }
 
+.mobile-only, .mobile {display: none; }
 
 @include respond-to('mobile'){
   html[dir='rtl']{
-
+    .mobile-only, .mobile, .avatar.mobile { position: relative; left: 0; float: right; clear: right; right: 0; }
+    .desktop { display: none; }
+    .comment .textarea .author, .comment .textarea .author {
+      width: calc(100% - 85px);
+      float: right;
+      clear: left;
+      margin-right: 16px;
+      height: 69px;
+      margin-bottom: 10px;
+      padding-top: 16px;
+      a {display: block; clear: both; }
+      .date.mobile {
+        display: block; clear: both; text-transform: uppercase;
+      }
+    }
     div.questions .comment .question-content .avatar {
       &.desktop { display: none; }
-      &.mobile-only { position: relative; left: 0; float: right; clear: right; right: 0;
+      &.mobile-only, &.mobile { display: inline-block; position: relative; left: 0; float: right; clear: right; right: 0;
         & + .author {
-          width: calc(100% - 85px);
+          width: calc(100% - 120px);
           float: right;
           clear: left;
           margin-right: 16px;
