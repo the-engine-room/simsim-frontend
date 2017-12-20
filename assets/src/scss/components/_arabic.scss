@@ -1,5 +1,5 @@
 
-html[dir="rtl"] {
+html[dir="rtl"], .rtl {
   font-family: $arabic !important;
   $headingFont: $arabic;
   $paragraphFont: $arabic;
@@ -25,7 +25,9 @@ html[dir="rtl"] {
       font-family: 'FontAwesome';
     }
   }
-
+  div.questions .comment .question-content .textarea .author a {
+    letter-spacing: 0px; font-family: $arabic !important;
+  }
   nav.secondary .language-choice ul li img {
     float: left;
   }
@@ -113,9 +115,9 @@ html[dir="rtl"] {
 
   section.introduction h1 { font-weight: 700; @include arabic-font; }
 
-  section.teasers .nouvelles-reponses > h2, section.teasers .publications > h2 {
+  section.teasers .nouvelles-reponses > h2, section.teasers .publications > h2, .main-content.vos-questions h1{
       position: relative;
-      span {
+      span, a {
         background-color: $inputColor;
         padding-left: 24px;
         z-index: 10;

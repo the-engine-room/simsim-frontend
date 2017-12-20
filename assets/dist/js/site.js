@@ -1340,7 +1340,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       jQuery(document).ready(function ($) {
         Theme.init();
       });
-    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_ed56ca67.js", "/");
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_88b86873.js", "/");
   }, { "./modules/theme": 6, "buffer": 2, "e/U+97": 4 }], 6: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // ------------------------------------
@@ -1374,6 +1374,29 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             this.mobileMenu();
             this.menuDropdown();
             this.mpAccordion();
+            this.testArabic();
+          },
+
+          isArabic: function isArabic(text) {
+            var pattern = /[\u0600-\u06FF\u0750-\u077F]/;
+            result = pattern.test(text);
+            return result;
+          },
+
+          testArabic: function testArabic() {
+            /** make this target inlcude all possible sources of rtl text - other than p tags **/
+            var target = $('p');
+
+            $.each(target, function (index, element) {
+              var paragraph = $(element);
+              var pattern = /[\u0600-\u06FF\u0750-\u077F]/;
+              var arabicTest = pattern.test(paragraph.text());
+
+              if (arabicTest === true) {
+                paragraph.addClass('rtl');
+                paragraph.attr('dir', 'rtl');
+              }
+            });
           },
 
           mobileMenu: function mobileMenu() {

@@ -29,9 +29,32 @@
             this.mobileMenu();
             this.menuDropdown();
             this.mpAccordion();
+            this.testArabic();
 
 
+        },
 
+        isArabic: function(text) {
+          var pattern = /[\u0600-\u06FF\u0750-\u077F]/;
+          result = pattern.test(text);
+          return result;
+        },
+
+        testArabic: function(){
+          /** make this target inlcude all possible sources of rtl text - other than p tags **/
+          var target = $('p');
+
+          $. each(target, function(index, element){
+            var paragraph = $(element);
+            var pattern = /[\u0600-\u06FF\u0750-\u077F]/;
+            var arabicTest = pattern.test(paragraph.text());
+
+            if(arabicTest === true ) {
+              paragraph.addClass('rtl');
+              paragraph.attr('dir', 'rtl');
+            }
+
+          });
         },
 
         mobileMenu: function() {
@@ -123,7 +146,7 @@
                 }
                 else {
                   $(this).load(file);
-                
+
 
                 }
             });
