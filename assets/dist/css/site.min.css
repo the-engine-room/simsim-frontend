@@ -365,6 +365,19 @@ html[dir="rtl"], .rtl {
     float: left; }
   html[dir="rtl"] nav.secondary .language-choice ul li a, .rtl nav.secondary .language-choice ul li a {
     padding-right: 10px; }
+  html[dir="rtl"] main.mp-profile .profile-select .details ul li a, .rtl main.mp-profile .profile-select .details ul li a {
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 100%; }
+  html[dir="rtl"] main.mp-profile .tags-wrapper .title p, .rtl main.mp-profile .tags-wrapper .title p {
+    font-size: 14px; }
+  html[dir="rtl"] section.teasers .blog .teaser, .rtl section.teasers .blog .teaser {
+    height: auto !important; }
+    html[dir="rtl"] section.teasers .blog .teaser a, .rtl section.teasers .blog .teaser a {
+      position: relative;
+      display: block;
+      clear: both;
+      margin-bottom: 20px; }
   html[dir="rtl"] .logo, .rtl .logo {
     float: right; }
   html[dir="rtl"] nav.primary, .rtl nav.primary {

@@ -34,7 +34,21 @@ html[dir="rtl"], .rtl {
   nav.secondary .language-choice ul li a {
     padding-right: 10px;
   }
+  main.mp-profile .profile-select .details ul li a {
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 100%;
 
+  }
+  main.mp-profile .tags-wrapper .title p {
+    font-size: 14px;
+  }
+  section.teasers .blog .teaser {
+    height: auto !important;
+    a {
+      position: relative; display: block; clear: both; margin-bottom: 20px;
+    }
+  }
   .logo {
     float: right;
   }
@@ -58,9 +72,9 @@ html[dir="rtl"], .rtl {
   }
 
 
-.mobile-nav-wrapper .submenu .search-box {
-  float: right;
-}
+  .mobile-nav-wrapper .submenu .search-box {
+    float: right;
+  }
 
   nav.secondary {
     .submenu {
@@ -331,6 +345,7 @@ main.mp-profile .title { float: right;
       margin-right: 0% !important;
     }
   }
+
 }
 
 div.questions .comment .question-content .textarea .author a, label, nav.secondary .submenu ul li a, div.responses-list .response .details .name
