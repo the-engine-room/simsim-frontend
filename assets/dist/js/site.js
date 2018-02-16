@@ -1340,7 +1340,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       jQuery(document).ready(function ($) {
         Theme.init();
       });
-    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_758ea25e.js", "/");
+    }).call(this, require("e/U+97"), typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {}, require("buffer").Buffer, arguments[3], arguments[4], arguments[5], arguments[6], "/fake_fb889b2.js", "/");
   }, { "./modules/theme": 6, "buffer": 2, "e/U+97": 4 }], 6: [function (require, module, exports) {
     (function (process, global, Buffer, __argument0, __argument1, __argument2, __argument3, __filename, __dirname) {
       // ------------------------------------
@@ -1430,25 +1430,25 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           },
 
           selectLists: function selectLists() {
-            /* $('.dropdown-wrapper').each(function(){
-                var parent = $(this);
-                var select = $(this).find('.select-content');
-                // onClick new options list of new select
-                select.text($(this).find('.dropdown-menu > li.selected').text());
-                var newOptions = $(this).find('.dropdown-menu > li');
-                newOptions.click(function() {
-                    $(select).text($(this).text());
-                    $('.dropdown-menu > li').removeClass('selected');
-                    $(this).addClass('selected');
-                });
-                var dropdown = $(this).find('.dropdown');
-                dropdown.click(function() {
-                    $('.dropdown').not(this).find('.dropdown-menu').addClass('hide');
-                    $('.dropdown').not(this).closest('.dropdown-wrapper').removeClass('active');
-                    $(parent).toggleClass('active');
-                    $(this).find('.dropdown-menu').toggleClass('hide');
-                });
-            }); */
+            $('.dropdown-wrapper').each(function () {
+              var parent = $(this);
+              var select = $(this).find('.select-content');
+              // onClick new options list of new select
+              select.text($(this).find('.dropdown-menu > li.selected').text());
+              var newOptions = $(this).find('.dropdown-menu > li');
+              newOptions.click(function () {
+                $(select).text($(this).text());
+                $('.dropdown-menu > li').removeClass('selected');
+                $(this).addClass('selected');
+              });
+              var dropdown = $(this).find('.dropdown');
+              dropdown.click(function () {
+                $('.dropdown').not(this).find('.dropdown-menu').addClass('hide');
+                $('.dropdown').not(this).closest('.dropdown-wrapper').removeClass('active');
+                $(parent).toggleClass('active');
+                $(this).find('.dropdown-menu').toggleClass('hide');
+              });
+            });
 
             $('select').niceSelect();
           },

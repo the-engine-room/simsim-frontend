@@ -25,8 +25,19 @@ html[dir="rtl"], .rtl {
       font-family: 'FontAwesome';
     }
   }
+  div.questions .filter {
+    float: left;
+  }
+  span.city-tag {display: block; clear: both; }
+  section.teasers .teaser .title,
+  section.teasers .teaser p.readmore,
+  div.questions .filter, div.questions .meta,
+  button.primary, .button-primary, input.button-primary,
   div.questions .comment .question-content .textarea .author a {
     letter-spacing: 0px; font-family: $arabic !important;
+  }
+  section.teasers .teaser p.readmore {
+
   }
   nav.secondary .language-choice ul li img {
     float: left;
@@ -46,7 +57,7 @@ html[dir="rtl"], .rtl {
   section.teasers .blog .teaser {
     height: auto !important;
     a {
-      position: relative; display: block; clear: both; margin-bottom: 20px;
+      position: relative; display: block; clear: both; margin-bottom: 20px; color: black; font-size: 18px;
     }
   }
   .logo {
@@ -55,6 +66,13 @@ html[dir="rtl"], .rtl {
 
   nav.primary {
     float: right;
+     width: 84.66667%;
+     ul { width: calc(99% - 235px);
+       li {
+         width: 19%;
+          text-align: center;
+       }
+     }
     ul li a {
       font-family: $arabic;
       letter-spacing: 0px !important;
@@ -62,6 +80,7 @@ html[dir="rtl"], .rtl {
     button {
       float: left;
       letter-spacing: 0px !important;
+      width: 235px;
     }
   }
   nav.secondary button.mobile-nav, .mobile-nav-wrapper button.mobile-nav-close {
@@ -77,6 +96,9 @@ html[dir="rtl"], .rtl {
   }
 
   nav.secondary {
+    @include respond-to('desktop'){
+      height: 79px;
+    }
     .submenu {
       margin-right: 24%;
       margin-left: 1%;
