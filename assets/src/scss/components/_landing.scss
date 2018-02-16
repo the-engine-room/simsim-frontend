@@ -167,6 +167,12 @@ section.teasers .blog {
 		}
 	}
 }
+section.teasers .blog .teaser {
+	height: auto !important;
+	a {
+		position: relative; display: block; clear: both; margin-bottom: 20px; color: black; font-size: 18px;
+	}
+}
 
 @include respond-to('mobile') {
 	section.introduction {

@@ -5,6 +5,7 @@
 div.questions-wrapper {
 	@include columns(9,2);
 }
+span.city-tag {display: block; clear: both; }
 div.questions {
 
 	.filter, .meta {

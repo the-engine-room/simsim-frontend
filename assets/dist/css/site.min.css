@@ -1740,6 +1740,16 @@ section.teasers .blog {
       height: 100%;
       z-index: 50; }
 
+section.teasers .blog .teaser {
+  height: auto !important; }
+  section.teasers .blog .teaser a {
+    position: relative;
+    display: block;
+    clear: both;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 18px; }
+
 @media (max-width: 736px) {
   section.introduction {
     padding: 24px 10px 48px; }
@@ -2882,6 +2892,10 @@ div.questions-wrapper {
       width: 90%;
       margin-left: 5%;
       margin-right: 5%; } }
+
+span.city-tag {
+  display: block;
+  clear: both; }
 
 div.questions .filter, div.questions .meta {
   text-transform: uppercase;
