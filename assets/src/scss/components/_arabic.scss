@@ -32,12 +32,16 @@ html[dir="rtl"], .rtl {
   section.teasers .teaser .title,
   section.teasers .teaser p.readmore,
   div.questions .filter, div.questions .meta,
+  main.mp-profile .tags-wrapper .title p,
   button.primary, .button-primary, input.button-primary,
   div.questions .comment .question-content .textarea .author a {
     letter-spacing: 0px; font-family: $arabic !important;
   }
   section.teasers .teaser p.readmore {
 
+  }
+  .main-content.post-question form input.button-primary.push-left{
+    float: left;
   }
   nav.secondary .language-choice ul li img {
     float: left;

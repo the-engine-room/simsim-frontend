@@ -51,6 +51,19 @@ label {
             margin-right: 3%;
             float: left;
         }
+        &.third {
+          width: 25%;
+          float: right;
+          margin-right: 3%;
+        }
+        &.two-thirds {
+          width: 63%;float: right; 
+          margin-right: 3%;
+        }
+
+        a {
+          line-height: 22px;
+        }
     }
 }
 @include respond-to('mobile'){

@@ -366,14 +366,18 @@ html[dir="rtl"], .rtl {
   html[dir="rtl"] section.teasers .teaser .title,
   html[dir="rtl"] section.teasers .teaser p.readmore,
   html[dir="rtl"] div.questions .filter, html[dir="rtl"] div.questions .meta,
+  html[dir="rtl"] main.mp-profile .tags-wrapper .title p,
   html[dir="rtl"] button.primary, html[dir="rtl"] .button-primary, html[dir="rtl"] input.button-primary,
   html[dir="rtl"] div.questions .comment .question-content .textarea .author a, .rtl section.teasers .teaser .title,
   .rtl section.teasers .teaser p.readmore,
   .rtl div.questions .filter, .rtl div.questions .meta,
+  .rtl main.mp-profile .tags-wrapper .title p,
   .rtl button.primary, .rtl .button-primary, .rtl input.button-primary,
   .rtl div.questions .comment .question-content .textarea .author a {
     letter-spacing: 0px;
     font-family: "Droid Arabic Kufi", sans-serif !important; }
+  html[dir="rtl"] .main-content.post-question form input.button-primary.push-left, .rtl .main-content.post-question form input.button-primary.push-left {
+    float: left; }
   html[dir="rtl"] nav.secondary .language-choice ul li img, .rtl nav.secondary .language-choice ul li img {
     float: left; }
   html[dir="rtl"] nav.secondary .language-choice ul li a, .rtl nav.secondary .language-choice ul li a {
@@ -1044,6 +1048,16 @@ label {
       width: 47%;
       margin-right: 3%;
       float: left; }
+    label.checkbox.third {
+      width: 25%;
+      float: right;
+      margin-right: 3%; }
+    label.checkbox.two-thirds {
+      width: 63%;
+      float: right;
+      margin-right: 3%; }
+    label.checkbox a {
+      line-height: 22px; }
 
 @media (max-width: 736px) {
   .post-question .checkbox.half {
@@ -2829,6 +2843,9 @@ main.mp-profile .vos-questions h1 .tab-nav, .tab-nav {
   display: block; }
   .tabs .tab.inactive {
     display: none; }
+
+.response-meta .score .score-number .numbers {
+  text-align: center; }
 
 div.pagination {
   float: left;
