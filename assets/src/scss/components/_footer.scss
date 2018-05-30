@@ -47,7 +47,8 @@ section.newsletter {
 footer.primary {
 	background-color: white;
 	padding: 57px 0 52px;
-
+	margin: 0px auto;
+	
 	nav.footer {
 		@include columns(5);
 

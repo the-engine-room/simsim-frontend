@@ -221,3 +221,23 @@ section.teasers .blog .teaser {
 		}
 	}
 }
+section.teasers .nouvelles-reponses > h2, section.teasers .publications > h2, .main-content.vos-questions h1,  section.teasers .nouvelles-reponses > h2,  section.teasers .publications > h2,  .main-content.vos-questions h1 {
+    position: relative;
+}
+section.teasers .nouvelles-reponses > h2 span, section.teasers .nouvelles-reponses > h2 a, section.teasers .publications > h2 span, section.teasers .publications > h2 a, .main-content.vos-questions h1 span, .main-content.vos-questions h1 a,  section.teasers .nouvelles-reponses > h2 span,  section.teasers .nouvelles-reponses > h2 a,  section.teasers .publications > h2 span,  section.teasers .publications > h2 a,  .main-content.vos-questions h1 span,  .main-content.vos-questions h1 a
+{
+    background-color: #F4F4F4;
+    padding-right: 24px;
+    z-index: 10;
+    position: relative;
+}
+section.teasers .nouvelles-reponses > h2:after, section.teasers .publications > h2:after, .main-content.vos-questions h1:after,  section.teasers .nouvelles-reponses > h2:after,  section.teasers .publications > h2:after,  .main-content.vos-questions h1:after {
+    content: ' ';
+    display: block;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    border-bottom: 1px solid #98B2B7;
+}
