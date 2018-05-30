@@ -75,6 +75,7 @@
         mpTabs: function() {
           $('.tab-nav').click(function(e){
             e.preventDefault();
+            console.log('Hey there.');
             var targetWrapper = $(this).data('ref');
             $(this).siblings().addClass('inactive');
             $(targetWrapper).children('.tab').addClass('inactive');
@@ -108,7 +109,7 @@
                     $(this).find('.dropdown-menu').toggleClass('hide');
                 });
             });
-            
+
             $('select').niceSelect();
         },
 
