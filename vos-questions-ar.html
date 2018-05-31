@@ -20,11 +20,19 @@
         <main>
             <div class="container">
                 <div class="main-content vos-questions">
-                    <h1><span>أسئلتكم</span></h1>
+                    <h1 id="mp-questions">أسئلتكم</h1>
                     <div class="questions-wrapper">
                         <form class="dropdowns">
                             <div class="dropdown-wrapper">
-                                <div class="dropdown">
+                              <select id="" name="theme" class="wide" placeholder="اختر اللجنة البرلمانية">
+                                <option>اختر اللجنة البرلمانية</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                              </select>
+
+
+                                <!-- <div class="dropdown">
                                     <div class="select">
                                         <span class="select-content"></span>
                                         <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
@@ -36,10 +44,17 @@
                                         <li><a href="#">Example 3</a></li>
                                         <li><a href="#">Example 4</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="dropdown-wrapper">
+                              <select id="" name="commission" class="wide" placeholder="اختر الموضوع">
+                                <option>اختر الموضوع</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                              </select>
+                              <!--
                                 <div class="dropdown">
                                     <div class="select">
                                         <span class="select-content"></span>
@@ -53,6 +68,7 @@
                                         <li><a href="#">Example 4</a></li>
                                     </ul>
                                 </div>
+                              -->
                             </div>
                         </form>
                         <div class="questions" data-include="questions-ar"></div>
@@ -63,6 +79,7 @@
         <div data-include="footer-ar"></div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/dist/js/jquery.nice-select.min.js"></script>
         <script src="assets/dist/js/site.js?v=1"></script>
         <script src="https://use.fontawesome.com/6f07f7ab39.js"></script>
     </body>
