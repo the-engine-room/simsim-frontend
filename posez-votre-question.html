@@ -16,6 +16,33 @@
     </head>
 
     <body>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : 'your-app-id',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.0'
+          });
+        };
+
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
         <div class="form-success">
             <div class="modal">
                 <h3>Félicitations!</h3>
@@ -37,7 +64,7 @@
                                     <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
                                 </div>
                                 <ul class="dropdown-menu hide">
-                                    <li class='selected'><a href="#">Les Themes</a></li>
+                                    <li class='selected'><a href="#">Les Thèmes</a></li>
                                     <li><a href="#">Example 1</a></li>
                                     <li><a href="#">Example 2</a></li>
                                     <li><a href="#">Example 3</a></li>
@@ -53,7 +80,7 @@
                                     <i class="fa fa-angle-down down-icon" aria-hidden="true"></i>
                                 </div>
                                 <ul class="dropdown-menu hide">
-                                    <li class='selected'><a href="#">Votre Depute-e</a></li>
+                                    <li class='selected'><a href="#">Votre Député-e</a></li>
                                     <li><a href="#">Example 1</a></li>
                                     <li><a href="#">Example 2</a></li>
                                     <li><a href="#">Example 3</a></li>
@@ -62,7 +89,7 @@
                         </div>
 
                         <label>Sujet</label>
-                        <input type="text" placeholder="Exemple: I’acces aux sions medicaux">
+                        <input type="text" placeholder="Exemple: I’acces aux soins medicaux">
 
                         <label for="message">Message</label>
                         <label class="checkbox"><input type="checkbox" name="checkbox-youtube" value="value">Partagez un message vidéo via YouTube</label>
@@ -72,7 +99,7 @@
                         </div>
 
                         <label>Nom Complet</label>
-                        <input type="text" placeholder="Nom et prenom">
+                        <input type="text" placeholder="Nom et prénom">
 
                         <label>Votre Ville</label>
                         <input type="text" placeholder="Votre ville">
@@ -85,6 +112,8 @@
 
                         <label class="checkbox half"><input type="checkbox" name="checkbox-charte" value="value">J'ai lu et approuvé la <a href="#">charte d'utilisation</a></label>
                         <label class="checkbox half"><input type="checkbox" name="checkbox-facebook" value="value">Partager sur Facebook</label>
+
+                        <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 
                         <input class="button-primary" type="submit" value="Envoyer">
                     </form>
