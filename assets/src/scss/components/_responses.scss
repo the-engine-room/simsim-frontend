@@ -4,7 +4,7 @@
 
 div.responses-list {
 	@include columns(10.8,0.6,0);
-	
+
 	padding: 53px 0;
 
 	.response {
@@ -53,6 +53,7 @@ div.responses-list {
 
 	h5 {
 		margin: 16px 0 5px;
+		font-size: 8px;
 	}
 
 	.score {
@@ -78,7 +79,7 @@ div.responses-list {
 				font-weight: 700;
 				font-family: $headingFont;
 			}
-			
+
 			.label {
 				margin: 1px 0 0;
 				font-size: 5px;

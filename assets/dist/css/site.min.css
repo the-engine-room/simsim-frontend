@@ -3215,7 +3215,8 @@ div.responses-list {
     height: 69px;
     border-radius: 50px; }
   .response-meta h5 {
-    margin: 16px 0 5px; }
+    margin: 16px 0 5px;
+    font-size: 8px; }
   .response-meta .score {
     background: #F9A400;
     color: white;
