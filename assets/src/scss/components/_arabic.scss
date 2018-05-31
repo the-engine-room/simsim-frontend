@@ -376,3 +376,14 @@ main.mp-profile .title { float: right;
 
 div.questions .comment .question-content .textarea .author a, label, nav.secondary .submenu ul li a, div.responses-list .response .details .name
 { letter-spacing: normal !important; }
+
+#mp-questions {
+
+  a {
+    background: none !important;
+  }
+  &:after {
+    border: none !important; 
+  }
+
+}

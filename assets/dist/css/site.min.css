@@ -630,6 +630,12 @@ html[dir="rtl"], .rtl {
 div.questions .comment .question-content .textarea .author a, label, nav.secondary .submenu ul li a, div.responses-list .response .details .name {
   letter-spacing: normal !important; }
 
+#mp-questions a {
+  background: none !important; }
+
+#mp-questions:after {
+  border: none !important; }
+
 button,
 .button,
 [class^="button"],
