@@ -636,6 +636,9 @@ div.questions .comment .question-content .textarea .author a, label, nav.seconda
 #mp-questions:after {
   border: none !important; }
 
+html[dir="rtl"] .nice-select {
+  text-align: right !important; }
+
 button,
 .button,
 [class^="button"],
@@ -1034,6 +1037,11 @@ legend {
   margin: 0 0 1em 0;
   font-weight: bold;
   border-bottom: 1px solid #EEEEEE; }
+
+.labelpad:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 label {
   display: block;

@@ -383,7 +383,11 @@ div.questions .comment .question-content .textarea .author a, label, nav.seconda
     background: none !important;
   }
   &:after {
-    border: none !important; 
+    border: none !important;
   }
 
+}
+
+html[dir="rtl"] .nice-select { 
+  text-align: right !important;
 }

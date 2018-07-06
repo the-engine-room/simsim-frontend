@@ -27,7 +27,9 @@ legend {
     font-weight: bold;
     border-bottom: 1px solid $baseColor;
 }
-
+.labelpad {
+  @include clearfix;
+}
 label {
     display: block;
     margin: 0 0 1em;
@@ -37,6 +39,7 @@ label {
     letter-spacing: 1.5px;
     font-size: 10px;
     color: $navColor;
+
 
     &.checkbox {
         color: $textColor;
@@ -57,7 +60,7 @@ label {
           margin-right: 3%;
         }
         &.two-thirds {
-          width: 63%;float: right; 
+          width: 63%;float: right;
           margin-right: 3%;
         }
 
