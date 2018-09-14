@@ -95,8 +95,12 @@
                         <label>مدينتكم</label>
                         <input type="text" placeholder="مدينتكم">
 
-                        <label>(الصفة (اختياري</label>
-                        <input type="text" placeholder="(الصفة (اختياري">
+                        <!-- this is how it should look like -->
+                        <!-- <label>(الصفة (اختياري</label> -->
+
+                        <!-- But you need to add special reflow char and rewrite the sentence altogether into this: -->
+                        <label> الصفة (اختياري&#x200e;)</label>
+                        <input type="text" placeholder=" الصفة (اختياري&#x200e;)"><!-- placeholder too -->
 
                         <label>عنوان البريد الالكتروني</label>
                         <input type="email" placeholder="عنوان البريد الالكتروني">
